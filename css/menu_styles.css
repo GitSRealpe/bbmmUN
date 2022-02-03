@@ -1,0 +1,638 @@
+  @font-face {
+    font-family: QuickSand;
+    src: url('../dist/fonts/quicksand/Quicksand-Regular.ttf');
+  }
+
+html{
+	overflow: hidden;
+}
+
+body{
+	margin: 0px;
+	height: 100px;
+	text-align: center;
+}
+@media (min-width: 1180px) {
+nav{
+	height: 200px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+li{
+	font-family: QuickSand;
+	color: white;
+	display: inline-block;
+	margin:-15px;
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	vertical-align: top;
+	/*background-color: #311cb1;*/
+	
+}
+li p{
+	position:relative;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	left:20px;
+	top:-80px;
+	z-index: 12;
+	pointer-events: none;
+}
+
+#t2{
+	left:26px;
+}
+#t3{
+	left:25px;
+}
+#t4{
+	left:22px;
+}
+#t5{
+	left:25px;
+}
+
+ul{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	list-style: none;
+	padding: 0px;
+}
+
+a{
+	margin:0px;
+	width: 120%;
+	height: 100%;
+	display: block;
+	position: relative;
+	color: white;
+	background-image: url(../img/Base.png);
+	text-decoration: none;
+	font-size: 100%;
+	justify-content: space-around;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	animation: squishback 0.5s;
+	animation-fill-mode: forwards;
+
+}
+
+a:hover{
+	background-image: url(../img/BaseHover.png);
+	animation: squish 0.5s;
+	animation-fill-mode: forwards;
+	
+}
+
+.talleres a{
+	height: 100px;
+	width: 100px;
+	background-image: none;
+	background-color: #2B9CFB;
+	border-radius: 100px;
+	text-align: center;
+	display: block;
+	font-family: QuickSand;
+	
+	
+}
+
+#tallermenu:hover .talleres{
+	display: block;
+}
+
+.talleres{	
+	position: absolute;
+	left: 55%;
+	top:120px;
+	right: auto;
+	display: none;
+}
+
+
+.t4:hover{
+	cursor:pointer;
+}
+
+#ab1{
+	left: 50px;
+	top:-80px;
+	z-index: 10;
+	animation: squishbackB 0.5s;
+	animation-fill-mode: forwards;
+}
+
+#ab1:hover{
+	animation: squishB 0.5s;
+	animation-fill-mode: forwards;	
+}
+
+#ab2{
+	left: 110px;
+	top:-130px;
+	z-index: 10;
+	animation: squishbackB  0.5s;
+	animation-fill-mode: forwards;
+}
+
+#ab2:hover{
+	animation: squishB 0.5s;
+	animation-fill-mode: forwards;	
+}
+
+#ab3{
+	left: 50px;
+	top:-180px;
+	z-index: 10;
+	animation: squishbackB  0.5s;
+	animation-fill-mode: forwards;
+}
+
+#ab3:hover{
+	animation: squishB 0.5s;
+	animation-fill-mode: forwards;	
+}
+.talleres a p{
+	left:0px;
+	top:40px;
+	position: relative;
+}
+
+.talleres li a{
+	width: 50px;
+}
+
+
+
+svg{
+	display: none;
+}
+
+
+@keyframes squish{
+	0%{
+		
+	   z-index:0;
+	   transform: scaleY(1) scaleX(0.95) translate(0,0);
+	   filter: blur(0px);
+	}
+	50%{
+	   filter: blur(1px);
+	}
+	100%{
+	   filter: blur(0px);
+	   z-index:10;
+	   transform: scaleY(1.25) scaleX(1)  translate(0,10px);
+   }
+   
+   }
+   @keyframes squishback{
+	   0%{
+		   z-index:10;
+		   transform: scaleY(1.25) scaleX(1)  translate(0,10px);
+		   filter: blur(0px);
+	   }
+	   50%{
+		   filter: blur(1px);
+		}
+   
+	   100%{
+		   z-index:0;
+		   transform: scaleY(1) scaleX(0.95)  translate(0,0);
+		   filter: blur(0px);
+	  }
+	  
+	  }
+   
+   
+
+@keyframes squishB{
+	0%{
+		
+	   
+	   transform: scaleY(1) scaleX(1) translate(0,0);
+	   background-color: #2B9CFB;
+	}
+	50%{
+	  
+	}
+	100%{
+	   
+	 
+	   transform: scaleY(1) scaleX(1)  translate(0,10px);
+	   background-color: #1d77c0;
+   }
+
+}
+
+
+
+
+@keyframes squishbackB{
+	0%{
+		
+		transform: scaleY(1) scaleX(1)  translate(0,10px);
+		background-color: #1d77c0;
+	}
+	50%{
+	
+	 }
+
+	100%{
+		
+		transform: scaleY(1) scaleX(1)  translate(0,0);
+		background-color: #2B9CFB;
+   }
+   
+   }
+
+}
+
+
+@media (max-width: 749px){
+	nav{
+		height: 100px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	
+	li{
+		font-family: QuickSand;
+		color: white;
+		display: block;
+		margin:0px;
+		width: 100%;
+		top:0px;
+		height: 40px;
+		text-align: center;
+		/*background-color: #311cb1;*/
+		
+	}
+	li p{
+		position:relative;
+		text-align: center;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 0px;
+		font-size: 8px;
+		left:0px;
+		top:-30px;
+		height: 50px;
+		z-index: 12;
+		pointer-events: none;
+	}
+	
+	#t2{
+		left:0px;
+	}
+	#t3{
+		left:0px;
+	}
+	#t4{
+		left:0px;
+	}
+	#t5{
+		left:0px;
+	}
+	
+	ul{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0px;
+		list-style: none;
+		padding: 0px;
+	}
+	
+	a{
+		margin:0px;
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: relative;
+		color: white;
+		background-image: url(../img/Base.png);
+		text-decoration: none;
+		font-size: 100%;
+		justify-content: space-around;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center;
+		animation: squishback 0.5s;
+		animation-fill-mode: forwards;
+	
+	}
+	
+	a:hover{
+		background-image: url(../img/BaseHover.png);
+		animation: squish 0.5s;
+		animation-fill-mode: forwards;
+		
+	}
+	
+	
+	
+	
+	
+	svg{
+		display: none;
+	}
+	
+	
+	@keyframes squish{
+	 0%{
+		 
+		z-index:0;
+		transform: scaleY(1) scaleX(0.98) translate(0,0);
+		filter: blur(0px);
+	 }
+	 50%{
+		filter: blur(1px);
+	 }
+	 100%{
+		filter: blur(0px);
+		z-index:10;
+		transform: scaleY(1) scaleX(1)  translate(0,10px);
+	}
+	
+	}
+	@keyframes squishback{
+		0%{
+			z-index:10;
+			transform: scaleY(1) scaleX(1)  translate(0,10px);
+			filter: blur(0px);
+		}
+		50%{
+			filter: blur(1px);
+		 }
+	
+		100%{
+			z-index:0;
+			transform: scaleY(1) scaleX(0.98)  translate(0,0);
+			filter: blur(0px);
+	   }
+	   
+	   }
+	
+	}
+
+
+	@media  (max-width: 1179px) {
+		nav{
+			height: 200px;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+		
+		li{
+			font-family: QuickSand;
+			color: white;
+			display: inline-block;
+			margin:-15px;
+			width: 18%;
+			height: 100px;
+			text-align: center;
+			vertical-align: top;
+			/*background-color: #311cb1;*/
+			
+		}
+		li p{
+			position:relative;
+			text-align: center;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 0px;
+			font-size: 10px;
+			left:0px;
+			top:-85px;
+			z-index: 12;
+			padding: 2px;
+			pointer-events: none;
+		}
+		
+		#t2{
+			left:0px;
+		}
+		#t3{
+			left:0px;
+		}
+		#t4{
+			left:0px;
+		}
+		#t5{
+			left:0px;
+		}
+		
+		ul{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: -30px;
+			list-style: none;
+			padding: 0px;
+		}
+		
+		a{
+			margin:0px;
+			width: 100%;
+			height: 120%;
+			display: block;
+			position: relative;
+			color: white;
+			background-image: url(../img/Base.png);
+			text-decoration: none;
+			font-size: 100%;
+			justify-content: space-around;
+			background-repeat: no-repeat;
+			background-size: contain ;
+			background-position: center;
+			animation: squishback 0.5s;
+			animation-fill-mode: forwards;
+
+		
+		}
+		
+		a:hover{
+			background-image: url(../img/BaseHover.png);
+			animation: squish 0.5s;
+			animation-fill-mode: forwards;
+			
+		}
+		
+		
+		.talleres a{
+			height: 60px;
+			width: 60px;
+			background-image: none;
+			background-color: #2B9CFB;
+			border-radius: 100px;
+			text-align: center;
+			display: block;
+			font-family: QuickSand;
+			
+			
+		}
+
+		#tallermenu:hover .talleres{
+			display: block;
+		}
+		
+		.talleres{	
+			position: absolute;
+			left: 55%;
+			top:100px;
+			right: auto;
+			display: none;
+		}
+		
+		
+		.t4:hover{
+			cursor:pointer;
+		}
+		
+		#ab1{
+			left: 50px;
+			top:-80px;
+			z-index: 10;
+			animation: squishbackB 0.5s;
+			animation-fill-mode: forwards;
+		}
+		
+		#ab1:hover{
+			animation: squishB 0.5s;
+			animation-fill-mode: forwards;	
+		}
+		
+		#ab2{
+			left: 90px;
+			top:-115px;
+			z-index: 10;
+			animation: squishbackB  0.5s;
+			animation-fill-mode: forwards;
+		}
+		
+		#ab2:hover{
+			animation: squishB 0.5s;
+			animation-fill-mode: forwards;	
+		}
+		
+		#ab3{
+			left: 50px;
+			top:-155px;
+			z-index: 10;
+			animation: squishbackB  0.5s;
+			animation-fill-mode: forwards;
+		}
+		
+		#ab3:hover{
+			animation: squishB 0.5s;
+			animation-fill-mode: forwards;	
+		}
+		.talleres a p{
+			left:0px;
+			top:20px;
+			font-size: 10px;
+			position: relative;
+		}
+		
+		.talleres li a{
+			width: 50px;
+		}
+		
+		
+		svg{
+			display: none;
+		}
+		
+		
+		@keyframes squish{
+		 0%{
+			 
+			z-index:0;
+			transform: scaleY(1) scaleX(0.95) translate(0,0);
+			filter: blur(0px);
+		 }
+		 50%{
+			filter: blur(1px);
+		 }
+		 100%{
+			filter: blur(0px);
+			z-index:10;
+			transform: scaleY(1) scaleX(1)  translate(0,10px);
+		}
+		
+		}
+
+		@keyframes squishB{
+			0%{
+				
+			   
+			   transform: scaleY(1) scaleX(0.95) translate(0,0);
+			   filter: blur(0px);
+			}
+			50%{
+			   filter: blur(1px);
+			}
+			100%{
+			   filter: blur(0px);
+			 
+			   transform: scaleY(1) scaleX(1)  translate(0,10px);
+		   }
+		
+		}
+
+		@keyframes squishback{
+			0%{
+				z-index:10;
+				transform: scaleY(1) scaleX(1)  translate(0,10px);
+				filter: blur(0px);
+			}
+			50%{
+				filter: blur(1px);
+			 }
+		
+			100%{
+				z-index:0;
+				transform: scaleY(1) scaleX(0.95)  translate(0,0);
+				filter: blur(0px);
+		   }
+		   
+		   }
+
+		   @keyframes squishbackB{
+			0%{
+				
+				transform: scaleY(1) scaleX(1)  translate(0,10px);
+				filter: blur(0px);
+			}
+			50%{
+				filter: blur(1px);
+			 }
+		
+			100%{
+				
+				transform: scaleY(1) scaleX(0.95)  translate(0,0);
+				filter: blur(0px);
+		   }
+		   
+		   }
+		
+		}
+		
+		

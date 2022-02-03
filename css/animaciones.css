@@ -1,0 +1,152 @@
+#Titulo{
+    animation: squish 1s;
+    animation-fill-mode: forwards;
+}
+
+#ImagenA{
+   animation: movea 1s;
+   animation-fill-mode: forwards;
+}
+
+
+@keyframes squish{
+    0%{
+        
+
+       transform: scaleY(0) scaleX(0);
+
+    }
+
+    100%{
+ 
+       transform: scaleY(1) scaleX(1);
+   }
+   
+   }
+
+   .squishy{
+      animation: squish 1s;
+    animation-fill-mode: forwards;
+   }
+
+   .zap {
+      animation: show 1s;
+    animation-fill-mode: forwards;
+   }
+
+   .zapSize {
+    animation: show 1s;
+  animation-fill-mode: forwards;
+ }
+
+   .moveRR {
+      animation: moveR 1s;
+    animation-fill-mode: forwards;
+   }
+
+   .moveLL {
+      animation: moveL 1s;
+    animation-fill-mode: forwards;
+   }
+
+.u-section-2{
+    opacity: 0;
+    height: 0px;
+}
+
+
+   @keyframes movea{
+    0%{
+ 
+       transform: scaleY(1) scaleX(1) translate(0,-500px);
+ 
+    }
+ 
+    100%{
+   
+       transform: scaleY(1) scaleX(1)  translate(0,0);
+   }
+   
+   }
+ 
+   @keyframes show{
+    0%{
+ 
+       opacity: 0;
+ 
+    }
+ 
+    100%{
+   
+      opacity: 1;
+   }
+   
+   }
+
+   @keyframes showSize{
+    0%{
+ 
+       opacity: 0;
+       scale: 0%;
+    }
+ 
+    100%{
+   
+      opacity: 1;
+      scale: 100%;
+   }
+   
+   }
+ 
+   @keyframes hide{
+    0%{
+ 
+       opacity: 1;
+ 
+    }
+ 
+    100%{
+   
+      opacity: 0;
+   }
+   
+   }
+ 
+   @keyframes moveR{
+    0%{
+       opacity: 0;
+      right: 300px;
+    }
+ 
+    100%{
+       opacity: 1;
+       right: 0px;
+   }
+   
+   }
+ 
+   @keyframes moveL{
+    0%{
+       opacity: 0;
+      left: 300px;
+    }
+ 
+    100%{
+       opacity: 1;
+       left: 0px;
+   }
+   
+   }
+ 
+   @keyframes rotate{
+    0%{
+       opacity: 0;
+      rotate: 300px;
+    }
+ 
+    100%{
+       opacity: 1;
+       left: 0px;
+   }
+   
+   }
