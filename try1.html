@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- endbuild -->
+
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <h1>Titulo</h1>
+
+    <label for="customRange1" class="form-label">Example range</label>
+    <input type="range" class="form-range" id="customRange1">
+
+    <input type="range" min="0" max="100" step="25" list="steplist">
+    <datalist id="steplist">
+        <option>0</option>
+        <option>25</option>
+        <option>50</option>
+        <option>75</option>
+        <option>100</option>
+    </datalist>
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+    </canvas>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <p>Altura 1</p>
+            </div>
+            <div class="carousel-item">
+                <p>Altura 2</p>
+            </div>
+            <div class="carousel-item">
+                <p>Altura 3</p>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <!-- <li class="splide__slide">1.60</li> -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
+</script>
+
+<script>
+    $(document).ready(function () {
+        let alturas = []
+        var middle = 1.60
+        alturas.push(middle - 0.05)
+        console.log(typeof (alturas[0]))
+        for (let index = 0; index < 10; index++) {
+            alturas.push(Math.round((alturas[index] + 0.01 + Number.EPSILON) * 100) / 100)
+            $('<div class="carousel-item"><p>Altura ' + alturas[index] + '</p></div>').appendTo('.carousel-inner')
+            $('#carouselExampleControls').carousel();
+        }
+        console.log(alturas)
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var splide = new Splide('.splide', {
+            perPage: 1,
+            // focus: 'center',
+            // drag: 'free',
+        });
+        splide.mount();
+
+        let alturas = []
+        var middle = 1.60
+        alturas.push(middle - 0.05)
+        for (let index = 0; index < 10; index++) {
+            alturas.push(Math.round((alturas[index] + 0.01 + Number.EPSILON) * 100) / 100)
+            splide.add('<li class="splide__slide">' + alturas[index] + '</li>');
+        }
+        splide.go(5);
+        // const { Controller } = splide.Components;
+        // console.log(Controller.getIndex())
+
+        splide.on( 'move', function (newIndex,prevIndex) {
+            console.log("movido")
+            if ((newIndex-prevIndex)>0) {
+                console.log("a la izquierda",newIndex-prevIndex)
+                for (let index = 0; index < newIndex-prevIndex; index++) {
+                    alturas.shift();
+                    alturas.push(Math.round((alturas[alturas.length-1] + 0.01 + Number.EPSILON) * 100) / 100)
+                    splide.add('<li class="splide__slide">' + alturas[alturas.length-1] + '</li>');
+                    splide.remove(0)
+                }
+                console.log(alturas)
+                alturas[5+newIndex-prevIndex]
+                // splide.add('<li class="splide__slide">' +  + '</li>');
+
+            }
+            if ((newIndex-prevIndex)<0) {
+                console.log("a la derecha")
+            }
+        } );
+
+    });
+</script>
+
+<!-- <script>
+    $(document).ready(function () {
+        $('<div class="carousel-item"><p>Altura dinamica</p></div>').appendTo('.carousel-inner')
+        $('#carouselExampleControls').carousel();
+    });
+</script> -->
+
+</html>
