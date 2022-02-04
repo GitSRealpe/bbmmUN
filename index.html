@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="dist/modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles_test.css">
     <!-- endbuild -->
 
     <title>Calculadora</title>
@@ -24,41 +25,40 @@
 <body>
     <h1>Titulo</h1>
 
-    <div id="value">0</div>
-    <input type="range" min="1.00" max="2.00" step="0.01" class="form-range" id="alturarange">
-
-    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
-    </canvas>
-
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false" data-bs-touch="true">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <p>Altura 1</p>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div>Mide tu altura desde la punta de tus pies a la cabeza.</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" align="center">
+                        Altura:  <span id="value" class="indicador_valor">1.60</span>  metros.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="range" min="1.00" max="2.00" step="0.01" class="form-range" data-toggle="tooltip" data-placement="top" id="alturarange">
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item">
-                <p>Altura 2</p>
-            </div>
-            <div class="carousel-item">
-                <p>Altura 3</p>
+            <div class="col">
+                <div class="media">
+                    <img src="img/giphy.gif" alt="gif_altura" class="d-flex mr-3 align-self-center img-fluid" id="steps_altura"/>
+                  </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        
     </div>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-    <!-- build:js js/main.js -->
-    <!-- <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+Tabla con la info respondida
+    <div class="container">
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+    </div>
+    
+    
     <script src="dist/modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="dist/modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="dist/modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -84,21 +84,6 @@
     }
 
     elem.addEventListener("input", rangeValue);
-</script>
-
-<script>
-    $(document).ready(function () {
-        let alturas = []
-        var middle = 1.60
-        alturas.push(middle - 0.05)
-        console.log(typeof (alturas[0]))
-        for (let index = 0; index < 10; index++) {
-            alturas.push(Math.round((alturas[index] + 0.01 + Number.EPSILON) * 100) / 100)
-            $('<div class="carousel-item"><p>Altura ' + alturas[index] + '</p></div>').appendTo('.carousel-inner')
-            $('#myCarousel').carousel();
-        }
-        console.log(alturas)
-    });
 </script>
 
 </html>

@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Blogger_Sans-Bold;
+  src: url('../dist/fonts/blogger-sans/Blogger_Sans-Bold.otf');
+}
+
+@font-face {
+font-family: QuickSand;
+src: url('../dist/fonts/quicksand/Quicksand-Bold.ttf');
+}
+
+@font-face {
+  font-family: Dosis;
+  src: url('../dist/fonts/Dosis/static/Dosis-Bold.ttf');
+  }
+
 .row-header {
   margin: 0px auto;
   padding: 0px 0px; }
@@ -26,7 +41,8 @@ address {
 
 body {
   padding: 50px 0px 0px 0px;
-  z-index: 0; }
+  z-index: 0;
+  font-family: Blogger_Sans-Bold; }
 
 .navbar-dark {
   background-color: #740a0e; }
@@ -62,3 +78,30 @@ body {
 
 .modal .close {
   color: floralwhite; }
+
+.indicador_valor{
+  font-family: Dosis;
+  font-size: 150%;
+}
+
+.form-range::-webkit-slider-thumb {
+  background: green;
+}
+
+.form-range::-moz-range-thumb {
+  background: green;
+}
+
+.form-range::-ms-thumb {
+  background: green;
+}
+
+#steps_altura{
+  -webkit-transform:rotate(90deg); /* Chrome, Safari, Opera */
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);   /* Standard syntax */
+  max-width: 40%;
+}
+
