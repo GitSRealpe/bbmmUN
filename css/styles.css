@@ -19,9 +19,9 @@ src: url('../dist/fonts/quicksand/Quicksand-Bold.ttf');
 
 .row-content {
   margin: 0px auto;
-  padding: 50px 0px;
-  border-bottom: 1px ridge;
-  min-height: 400px; }
+  padding: 0px 0px;
+  border-top: 1px ridge;
+   }
 
 .footer {
   background-color: #bfb1a9;
@@ -42,7 +42,12 @@ address {
 body {
   padding: 50px 0px 0px 0px;
   z-index: 0;
-  font-family: Blogger_Sans-Bold; }
+  font-family: Blogger_Sans-Bold;
+  background-color: rgb(109, 102, 89); }
+
+.container{
+  background-color: rgb(185, 174, 151);
+}
 
 .navbar-dark {
   background-color: #740a0e; }
@@ -97,11 +102,12 @@ body {
 }
 
 #steps_altura{
-  -webkit-transform:rotate(90deg); /* Chrome, Safari, Opera */
+  /* -webkit-transform:rotate(90deg); 
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
-  transform: rotate(90deg);   /* Standard syntax */
-  max-width: 40%;
+  transform: rotate(90deg);    */
+  max-width: 20%;
+  min-width: 2cm;
 }
 
