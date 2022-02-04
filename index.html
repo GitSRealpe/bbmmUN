@@ -77,7 +77,6 @@
 
 <script>
     var elem = document.getElementById("alturarange");
-
     var rangeValue = function () {
         var newValue = elem.value;
         var target = document.getElementById('value');
@@ -85,10 +84,21 @@
     }
 
     elem.addEventListener("input", rangeValue);
-
-
 </script>
 
-
+<script>
+    $(document).ready(function () {
+        let alturas = []
+        var middle = 1.60
+        alturas.push(middle - 0.05)
+        console.log(typeof (alturas[0]))
+        for (let index = 0; index < 10; index++) {
+            alturas.push(Math.round((alturas[index] + 0.01 + Number.EPSILON) * 100) / 100)
+            $('<div class="carousel-item"><p>Altura ' + alturas[index] + '</p></div>').appendTo('.carousel-inner')
+            $('#myCarousel').carousel();
+        }
+        console.log(alturas)
+    });
+</script>
 
 </html>
