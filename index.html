@@ -28,63 +28,44 @@
     <div class="container">
         <div class="row row-header">Info. Personal</div>
         <div class="row align-items-center row-content">
-            <div class="col">
+            <div class="col col-xs-1 col-lg-3 ">
+                <a>Cuantos años tienes?</a>
                 <div class="text-center">
-                    <form>
-                        <label for="quantity">Edad:</label>
-                        <input type="number" id="quantity" name="quantity" min="1" max="99">
-                      </form> 
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Edad</span>
+                        <input type="number" id="edad" min="1" max="99" placeholder="..." class="form-control"
+                            aria-label="Edad" aria-describedby="basic-addon1" onchange="cambio('edad',this.value)">
+                    </div>
                 </div>
-                
+
             </div>
-            <div class="col">
+            <div class="col-5">
+                Sexo
                 <div class="text-center">
-                    genero
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="Masculino" onchange="cambio('sexo',this.value)">
+                        <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="Femenino" onchange="cambio('sexo',this.value)">
+                        <label class="form-check-label" for="inlineRadio2">Femenino</label>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row row-header">Medidas corporales</div>
         <div class="row align-items-center row-content">
             <div class="row">
-            <div class="col">
-                <div class="row">
-                    <div class="col">
-                        <h4>Altura</h3>
-                        <div>Mide la altura desde la punta de tus pies a la cabeza, ubica el valor abajo.</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col" align="center">
-                        Altura:  <span id="value" class="indicador_valor">1.60</span>  metros.
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1">
-                        <span class="fa fa-arrow-circle-right fa-lg"></span>
-                    </div>
-                    <div class="col">
-                        <input type="range" min="1.00" max="2.00" step="0.01" class="form-range" data-toggle="tooltip" data-placement="top" id="alturarange">
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="media">
-                    <img src="img/giphy.gif" alt="gif_altura" class=" img-fluid" id="steps_altura"/>
-                  </div>
-            </div>
-        </div>
-
-            <div class="row">
                 <div class="col">
                     <div class="row">
                         <div class="col">
-                            <h4>Perimetro abdominal</h3>
-                            <div>Mide al nivel del ombligo el tamaño de tu abdomen, ubica el valor abajo.</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col" align="center">
-                            Perimetro:  <span id="value_ombligo" class="indicador_valor">30</span>  centímetros.
+                            <h4>Altura</h4>
+                            <div>Mide la altura desde la punta de tus pies a la cabeza, indica el valor abajo.</div>
+                            <div class="text-center">
+                                Altura: <span id="alturaValue" class="indicador_valor">1.60</span> metros.
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -92,20 +73,58 @@
                             <span class="fa fa-arrow-circle-right fa-lg"></span>
                         </div>
                         <div class="col">
-                            <input type="range" min="1.00" max="2.00" step="0.01" class="form-range" data-toggle="tooltip" data-placement="top" id="ombligo_range">
+                            <input type="range" min="1.00" max="2.00" step="0.01" class="form-range" id="alturaRange"
+                                onchange="cambio('altura',this.value)">
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="media">
-                        <img src="img/giphy.gif" alt="gif_altura" class=" img-fluid" id="steps_altura"/>
-                      </div>
+                        <img src="img/giphy.gif" alt="gif_altura" class=" img-fluid" id="steps_altura" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h4>Perimetro abdominal</h4>
+                            <div>Mide al nivel del ombligo el tamaño de tu abdomen, ubica el valor abajo.</div>
+                            <div class="text-center">
+                                Perimetro: <span id="ombligoValue" class="indicador_valor">1.60</span> centimetros.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <span class="fa fa-arrow-circle-right fa-lg"></span>
+                        </div>
+                        <div class="col">
+                            <input type="range" min="1.00" max="2.00" step="0.01" class="form-range" id="ombligoRange"
+                                onchange="cambio('ombligo',this.value)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="media">
+                        <img src="img/giphy.gif" alt="gif_altura" class=" img-fluid" id="steps_altura" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h4>Indice de Masa Corporal (IMC)</h4>
+                    Con la información de tu altura y el peso calculamos el indice de masa corporal que
+                    define...
+                    <div> Tu IMC: <span id="imcValue">1.60</span> kg/m².</div>
                 </div>
             </div>
         </div>
 
         <div class="row align-items-center row-content">
-            
+
         </div>
         <div class="row row-header">Vida diaria</div>
         <div class="row row-header">Historia médica</div>
@@ -114,11 +133,51 @@
 
     <div class="container">
         <p>Tabla con la info respondida</p>
-        
+        <div class="row">
+            <div class="col-sm-12 col-lg-5 ">
+                <table class="table table-bordered table-success table-striped">
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>Puntos</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Edad</th>
+                            <td><span id="edadLabel">---</span> años</td>
+                            <td><span id="edadPoints">---</span></td>
+                        </tr>
+                        <tr class="align-middle">
+                            <td>
+                                IMC
+                                <table class="table">
+                                    <tr>
+                                        <th scope="row">Altura</th>
+                                        <td><span id="alturaLabel">---</span> m</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ombligo</th>
+                                        <td><span id="ombligoLabel">---</span> cm</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td><span id="imcLabel">---</span></td>
+                            <td><span id="imcPoints">---</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sexo</th>
+                            <td><span id="sexoLabel">---</span></td>
+                            <td><span id="sexoPoints">---</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
     </div>
-    
-    
+
+
     <script src="dist/modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="dist/modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="dist/modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -126,6 +185,29 @@
     <!-- endbuild -->
 
 </body>
+
+<script>
+    var elem = document.getElementById("alturaRange");
+    var elem2 = document.getElementById("ombligoRange");
+    var rangeValue = function () {
+        console.log(this.id)
+        // var newValue = elem.value;
+        var newValue = document.getElementById(this.id).value;
+        var target;
+        switch (this.id) {
+            case "alturaRange":
+                target = document.getElementById("alturaValue");
+                break;
+            case "ombligoRange":
+                target = document.getElementById("ombligoValue");
+            default:
+                break;
+        }
+        target.innerHTML = newValue;
+    }
+    elem.addEventListener("input", rangeValue);
+    elem2.addEventListener("input", rangeValue);
+</script>
 
 <script>
     var c = document.getElementById("myCanvas");
@@ -136,14 +218,55 @@
 </script>
 
 <script>
-    var elem = document.getElementById("alturarange");
-    var rangeValue = function () {
-        var newValue = elem.value;
-        var target = document.getElementById('value');
-        target.innerHTML = newValue;
+    var h = 0, o = 0, imc = 0;
+    function cambio(label, valor) {
+        console.log("suma")
+        console.log("cambiaso", label, "valor", valor)
+        var target = document.getElementById(label + "Label");
+        target.innerHTML = valor;
+        target = document.getElementById(label + "Points");
+        var point;
+        if (label == "altura" || label == "ombligo") {
+            h = parseFloat(document.getElementById("alturaRange").value);
+            o = parseFloat(document.getElementById("ombligoRange").value);
+            imc = h + o;
+            imc = Math.round((imc + 0.01 + Number.EPSILON) * 100) / 100
+            console.log(imc);
+            ///
+            target = document.getElementById("imcValue");
+            target.innerHTML = imc;
+            target = document.getElementById("imcLabel");
+            target.innerHTML = imc;
+            target = document.getElementById("imcPoints");
+            if (imc < 25) {
+                point = 0;
+            }
+            if (25 <= imc && imc <= 30) {
+                point = 1;
+            }
+            if (30 < imc) {
+                point = 3;
+            }
+        }
+        switch (label) {
+            case "edad":
+                valor = parseInt(valor);
+                if (valor < 45) {
+                    point = 0;
+                }
+                if (45 <= valor && valor <= 54) {
+                    point = 2;
+                }
+                if (55 <= valor && valor <= 64) {
+                    point = 3;
+                }
+                if (64 < valor) {
+                    point = 4;
+                }
+                break;
+        }
+        target.innerHTML = point;
     }
-
-    elem.addEventListener("input", rangeValue);
 </script>
 
 </html>
