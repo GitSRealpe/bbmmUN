@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"> -->
+    <link rel="stylesheet" href="dist/modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles_test.css">
+    <!-- endbuild -->
+
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <h1>Calculadora FINDRISC</h1>
+
+    <div class="container">
+        <div class="row row-header">Info. Personal</div>
+        <div class="row align-items-center row-content">
+            <div class="col col-xs-1 col-lg-3 ">
+                <a>Cuantos años tienes?</a>
+                <div class="text-center">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Edad</span>
+                        <input type="number" id="edad" min="1" max="99" placeholder="..." class="form-control"
+                            aria-label="Edad" aria-describedby="basic-addon1" onchange="cambio('edad',this.value)">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-5">
+                Sexo
+                <div class="text-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="genderOpt" id="sexoRadio1" value="Masculino"
+                            onchange="cambio('sexo',this.value)">
+                        <label class="form-check-label" for="sexoRadio1">Masculino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="genderOpt" id="sexoRadio2" value="Femenino"
+                            onchange="cambio('sexo',this.value)">
+                        <label class="form-check-label" for="sexoRadio2">Femenino</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-header">Medidas corporales</div>
+        <div class="row align-items-center row-content">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h4>Altura</h4>
+                            <div>Mide la altura desde la punta de tus pies a la cabeza, indica el valor abajo.</div>
+                            <div class="text-center">
+                                Altura: <span id="alturaValue" class="indicador_valor">---</span> metros.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <span class="fa fa-arrow-circle-right fa-lg"></span>
+                        </div>
+                        <div class="col">
+                            <input type="range" min="1.00" max="2.00" step="0.01" class="form-range" id="alturaRange"
+                                onchange="cambio('altura',this.value)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="media">
+                        <img src="img/giphy.gif" alt="gif_altura" class=" img-fluid" id="steps_altura" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h4>Perimetro abdominal</h4>
+                            <div>Mide al nivel del ombligo el tamaño de tu abdomen, ubica el valor abajo.</div>
+                            <div class="text-center">
+                                Perimetro: <span id="ombligoValue" class="indicador_valor">---</span> centimetros.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <span class="fa fa-arrow-circle-right fa-lg"></span>
+                        </div>
+                        <div class="col">
+                            <input type="range" min="60" max="120" step="1" class="form-range" id="ombligoRange"
+                                onchange="cambio('ombligo',this.value)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="media">
+                        <img src="img/giphy.gif" alt="gif_altura" class=" img-fluid" id="steps_altura" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h4>Peso</h4>
+                            <div>Mide tu peso, ubica el valor abajo.</div>
+                            <div class="text-center">
+                                Peso: <span id="pesoValue" class="indicador_valor">---</span> kilos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <span class="fa fa-arrow-circle-right fa-lg"></span>
+                        </div>
+                        <div class="col">
+                            <input type="range" min="40" max="150" step="1" class="form-range" id="pesoRange"
+                                onchange="cambio('peso',this.value)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="media">
+                        <img src="img/giphy.gif" alt="gif_altura" class=" img-fluid" id="steps_altura" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h4>Indice de Masa Corporal (IMC)</h4>
+                    Con la información de tu altura y el peso calculamos el indice de masa corporal que
+                    define...
+                    <div> Tu IMC: <span id="imcValue">1.60</span> kg/m².</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-header">Vida diaria
+            <div class="row align-items-center row-content">
+                Responde lo siguiente
+                <div class="row align-items-top">
+                    <div class="col">
+                        <h4>Actividad física</h4>
+                        ¿Realiza normalmente al menos 30 minutos diarios de actividad fisica?
+                        <div class="text-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="exerOpt" id="exerRadio1" value="Si"
+                                    onchange="cambio('ejercicio',this.value)">
+                                <label class="form-check-label" for="exerRadio1">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="exerOpt" id="exerRadio2" value="No"
+                                    onchange="cambio('ejercicio',this.value)">
+                                <label class="form-check-label" for="exerRadio2">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h4>Alimentación</h4>
+                        ¿Con qué frecuencia come frutas, verduras y hortalizas?
+                        <div class="text-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="frutasOpt" id="frutasRadio1"
+                                    value="Si" onchange="cambio('frutas',this.value)">
+                                <label class="form-check-label" for="frutasRadio1">A diario</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="frutasOpt" id="frutasRadio2"
+                                    value="No" onchange="cambio('frutas',this.value)">
+                                <label class="form-check-label" for="frutasRadio2">No a diario</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="row row-header">Historia médica</div>
+        <div class="row row-header">Antecedentes familiares</div>
+
+        <div class="container">
+            <p>Tabla con la info respondida</p>
+            <div class="row">
+                <div class="col-sm-12 col-lg-5 ">
+                    <table class="table table-bordered table-success table-striped">
+                        <tbody>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th>Puntos</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Edad</th>
+                                <td><span id="edadLabel">---</span> años</td>
+                                <td><span id="edadPoints">---</span></td>
+                            </tr>
+                            <tr class="align-middle">
+                                <td>
+                                    IMC
+                                    <table class="table">
+                                        <tr>
+                                            <th scope="row">Altura</th>
+                                            <td><span id="alturaLabel">---</span> m</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Peso</th>
+                                            <td><span id="pesoLabel">---</span> kg</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td><span id="imcLabel">---</span>kg/m²</td>
+                                <td><span id="imcPoints">---</span></td>
+                            </tr>
+                            <tr class="align-middle">
+                                <td>
+                                    Perimetro abdominal
+                                    <table class="table">
+                                        <tr>
+                                            <th scope="row">Perimetro</th>
+                                            <td><span id="ombligoLabel">---</span> cm</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td><span id="sexoLabel">---</span></td>
+                                <td><span id="ombligoPoints">---</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col">
+                    los params que faltan seleccionar, cuando todos esten seleccionados,
+                    usar este espacio para mostrar la tabla de resultados
+                </div>
+            </div>
+
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+        </div>
+
+
+        <script src="dist/modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="dist/modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="dist/modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <!-- endbuild -->
+
+</body>
+
+<script>
+    var elem = document.getElementById("alturaRange");
+    var elem2 = document.getElementById("ombligoRange");
+    var elem3 = document.getElementById("pesoRange");
+    var rangeValue = function () {
+        console.log(this.id)
+        // var newValue = elem.value;
+        var newValue = document.getElementById(this.id).value;
+        var target;
+        switch (this.id) {
+            case "alturaRange":
+                target = document.getElementById("alturaValue");
+                break;
+            case "ombligoRange":
+                target = document.getElementById("ombligoValue");
+                break;
+            case "pesoRange":
+                target = document.getElementById("pesoValue");
+                break;
+            default:
+                break;
+        }
+        target.innerHTML = newValue;
+    }
+    elem.addEventListener("input", rangeValue);
+    elem2.addEventListener("input", rangeValue);
+    elem3.addEventListener("input", rangeValue);
+</script>
+
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
+</script>
+
+<!-- <script>
+
+    function pointsEdad(valor) {
+        valor = parseInt(valor);
+        if (valor < 45) {
+            point = 0;
+        }
+        if (45 <= valor && valor <= 54) {
+            point = 2;
+        }
+        if (55 <= valor && valor <= 64) {
+            point = 3;
+        }
+        if (64 < valor) {
+            point = 4;
+        }
+        return point;
+    }
+
+    function pointsOmbligo(valor) {
+        var checked_gender = document.querySelector('input[name = "genderOpt"]:checked')
+        console.log(checked_gender.value, valor)
+        var point;
+        valor = parseInt(valor);
+        switch (checked_gender.value) {
+            case "Masculino":
+                if (valor < 94) {
+                    point = 0;
+                }
+                if (94 <= valor && valor <= 102) {
+                    point = 3;
+                }
+                if (102 < valor) {
+                    point = 4;
+                }
+                break;
+            case "Femenino":
+                if (valor < 80) {
+                    point = 0;
+                }
+                if (80 <= valor && valor <= 88) {
+                    point = 3;
+                }
+                if (88 < valor) {
+                    point = 4;
+                }
+                break;
+            default:
+                break;
+        }
+        return point;
+    }
+
+    var h = 0, w = 0, imc = 0;
+    function pointsIMC() {
+        h = parseFloat(document.getElementById("alturaRange").value);
+        w = parseFloat(document.getElementById("pesoRange").value);
+        imc = w / (h * h);
+        imc = Math.round((imc + 0.01 + Number.EPSILON) * 100) / 100
+        console.log(imc);
+        ///
+        target = document.getElementById("imcValue");
+        target.innerHTML = imc;
+        target = document.getElementById("imcLabel");
+        target.innerHTML = imc;
+        target = document.getElementById("imcPoints");
+        if (imc < 25) {
+            point = 0;
+        }
+        if (25 <= imc && imc <= 30) {
+            point = 1;
+        }
+        if (30 < imc) {
+            point = 3;
+        }
+        target.innerHTML = point;
+        return;
+    }
+
+    function cambio(label, valor) {
+        // console.log("suma")
+        console.log("cambiaso", label, "valor", valor)
+        var target = document.getElementById(label + "Label");
+        target.innerHTML = valor;
+        target = document.getElementById(label + "Points");
+        var point;
+        if (label == "altura" || label == "peso") {
+            pointsIMC();
+        }
+        switch (label) {
+            case "edad":
+                point = pointsEdad(valor);
+                target.innerHTML = point;
+                break;
+            case "ombligo":
+                point = pointsOmbligo(valor);
+                target.innerHTML = point;
+                break;
+            case "sexo":
+                console.log("camiado sexos")
+                valor = document.getElementById("ombligoRange").value;
+                point = pointsOmbligo(valor);
+                target = document.getElementById("ombligoPoints");
+                target.innerHTML = point;
+                break;
+        }
+        return;
+
+    }
+</script> -->
+
+</html>
