@@ -13,9 +13,24 @@ src: url('../dist/fonts/quicksand/Quicksand-Bold.ttf');
   src: url('../dist/fonts/Dosis/static/Dosis-Bold.ttf');
   }
 
+.tab{
+  margin-left: 8px;
+  color: #212529;
+  border-bottom: 1px ridge;
+}
+
+.table{
+  margin-bottom: 0px;
+}
+
+.bg-orange{
+  background-color: #ca7c07;
+}
+
 .row-header {
   margin: 0px auto;
-  padding: 0px 0px; }
+  padding: 5px 5px;
+  border-top: 1px ridge; }
 
 .row-content {
   margin: 0px auto;
