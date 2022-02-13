@@ -9,9 +9,6 @@
 
     <!-- Bootstrap CSS -->
     <!-- build:css css/main.css -->
-    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"> -->
     <link rel="stylesheet" href="dist/modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/modules/bootstrap-social/bootstrap-social.css">
@@ -23,12 +20,13 @@
 </head>
 
 <body>
-    <h1>Calculadora FINDRISC</h1>
+
 
     <div class="container">
+        <h1>Calculadora FINDRISC</h1>
         <div class="row row-header">Info. Personal</div>
         <div class="row align-items-center row-content">
-            <div class="col col-xs-1 col-lg-3 ">
+            <div class="col col-md-5 col-lg-3">
                 <a>Cuantos años tienes?</a>
                 <div class="text-center">
                     <div class="input-group mb-3">
@@ -39,18 +37,21 @@
                 </div>
 
             </div>
-            <div class="col-5">
-                Sexo
-                <div class="text-center">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="genderOpt" id="inlineRadio1"
-                            value="Masculino" onchange="cambio('sexo',this.value)">
-                        <label class="form-check-label" for="inlineRadio1">Masculino</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="genderOpt" id="inlineRadio2" value="Femenino"
-                            onchange="cambio('sexo',this.value)">
-                        <label class="form-check-label" for="inlineRadio2">Femenino</label>
+            <div class="col-7">
+                <div class="row">
+                    <div class="col col-sm-2">Sexo:</div>
+                    <div class="col-9">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="genderOpt" id="sexoRadio1"
+                                value="Masculino" onchange="cambio('sexo',this.value)">
+                            <label class="form-check-label" for="sexoRadio1">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="genderOpt" id="sexoRadio2"
+                                value="Femenino" onchange="cambio('sexo',this.value)">
+                            <label class="form-check-label" for="sexoRadio2">Femenino</label>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -151,82 +152,306 @@
             </div>
         </div>
 
-        <div class="row align-items-center row-content">
-
+        <div class="row row-header">Vida diaria
+            <div class="row align-items-center row-content">
+                Responde lo siguiente
+                <div class="row align-items-top">
+                    <div class="col-12 col-md-6">
+                        <h4>Actividad física</h4>
+                        ¿Realiza normalmente al menos 30 minutos diarios de actividad fisica?
+                        <div class="text-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="exerOpt" id="exerRadio1" value="Si"
+                                    onchange="cambio('exer',this.value)">
+                                <label class="form-check-label" for="exerRadio1">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="exerOpt" id="exerRadio2" value="No"
+                                    onchange="cambio('exer',this.value)">
+                                <label class="form-check-label" for="exerRadio2">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h4>Alimentación</h4>
+                        ¿Con qué frecuencia come frutas, verduras y hortalizas?
+                        <div class="text-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="frutasOpt" id="frutasRadio1"
+                                    value="Si" onchange="cambio('frutas',this.value)">
+                                <label class="form-check-label" for="frutasRadio1">A diario</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="frutasOpt" id="frutasRadio2"
+                                    value="No" onchange="cambio('frutas',this.value)">
+                                <label class="form-check-label" for="frutasRadio2">No a diario</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row row-header">Vida diaria</div>
-        <div class="row row-header">Historia médica</div>
-        <div class="row row-header">Antecedentes familiares</div>
-    </div>
 
-    <div class="container">
-        <p>Tabla con la info respondida</p>
-        <div class="row">
-            <div class="col-sm-12 col-lg-5 ">
-                <table class="table table-bordered table-success table-striped">
-                    <tbody>
-                        <tr>
-                            <th></th>
-                            <th></th>
+        <div class="row row-header">
+            Historia médica
+            <div class="row align-items-center row-content">
+                Responde lo siguiente
+                <div class="row align-items-top">
+                    <div class="col-12 col-md-6">
+                        <h4>Medicación</h4>
+                        ¿Le han recetado alguna vez medicamentos contra la HTA?
+                        <div class="text-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="medsOpt" id="medsRadio1" value="Si"
+                                    onchange="cambio('meds',this.value)">
+                                <label class="form-check-label" for="medsRadio1">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="medsOpt" id="medsRadio2" value="No"
+                                    onchange="cambio('meds',this.value)">
+                                <label class="form-check-label" for="medsRadio2">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h4>Glucosa</h4>
+                        ¿Le han detectado alguna vez niveles altos de glucosa en la sangre?
+                        <div class="text-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="glucOpt" id="glucRadio1" value="Si"
+                                    onchange="cambio('gluc',this.value)">
+                                <label class="form-check-label" for="glucRadio1">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="glucOpt" id="glucRadio2" value="No"
+                                    onchange="cambio('gluc',this.value)">
+                                <label class="form-check-label" for="glucRadio2">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-header">
+            Antecedentes familiares
+            <div class="row align-items-center row-content">
+                Responde lo siguiente
+                <div class="row align-items-top">
+                    <div class="col-12 col-md-6">
+                        <h4>Diabetes Mellitus en la familia</h4>
+                        ¿Ha habido algún diagnóstico de DM en su familia?
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="famOpt" id="famRadio1" value="No"
+                                onchange="cambio('fam',this.value)">
+                            <label class="form-check-label" for="famRadio1">No</label>
+                        </div>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="famOpt" id="famRadio2"
+                                value="Si:abuelos, tíos o primos hermanos" onchange="cambio('fam',this.value)">
+                            <label class="form-check-label" for="famRadio2">Si:abuelos, tíos o primos hermanos
+                                (sin contar padres, hermanos o hijos)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="famOpt" id="famRadio3"
+                                value="Si: padres, hermanos o hijos" onchange="cambio('fam',this.value)">
+                            <label class="form-check-label" for="famRadio3">Si: padres, hermanos o hijos.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <p>Tabla con la info respondida</p>
+            <div class="row">
+                <div class="col-sm-12 col-lg-6 ">
+                    <table class="table table-bordered table-success table-striped table-hover">
+                        <thead class="table-dark">
+                            <th>Parametro</th>
+                            <th>Dato</th>
                             <th>Puntos</th>
-                        </tr>
-                        <tr>
-                            <th scope="row">Edad</th>
-                            <td><span id="edadLabel">---</span> años</td>
-                            <td><span id="edadPoints">---</span></td>
-                        </tr>
-                        <tr class="align-middle">
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- <th scope="row">Edad</th> -->
+                                <td>Edad</td>
+                                <td><span id="edadLabel">---</span> años</td>
+                                <td><span id="edadPoints">---</span></td>
+                            </tr>
+                            <tr class="align-middle">
+                                <td>
+                                    IMC
+                                    <table class="table">
+                                        <tr>
+                                            <th scope="row">Altura</th>
+                                            <td><span id="alturaLabel">---</span> m</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Peso</th>
+                                            <td><span id="pesoLabel">---</span> kg</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td><span id="imcLabel">---</span>kg/m²</td>
+                                <td><span id="imcPoints">---</span></td>
+                            </tr>
+                            <tr class="align-middle">
+                                <td>
+                                    Perimetro abdominal
+                                    <table class="table">
+                                        <tr>
+                                            <th scope="row">Perimetro</th>
+                                            <td><span id="ombligoLabel">---</span> cm</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td><span id="sexoLabel">---</span></td>
+                                <td><span id="ombligoPoints">---</span></td>
+                            </tr>
+                            <tr class="align-middle">
+                                <td>Ejercicio diario</td>
+                                <td><span id="exerLabel">---</span></td>
+                                <td><span id="exerPoints">---</span></td>
+                            </tr>
+                            <tr>
+                                <td>Consumo, frutas, verduras y hortalizas</td>
+                                <td><span id="frutasLabel">---</span></td>
+                                <td><span id="frutasPoints">---</span></td>
+                            </tr>
+                            <tr>
+                                <td>Medicado/a contra la HTA</td>
+                                <td><span id="medsLabel">---</span></td>
+                                <td><span id="medsPoints">---</span></td>
+                            </tr>
+                            <tr>
+                                <td>Presentado niveles altos de glucosa</td>
+                                <td><span id="glucLabel">---</span></td>
+                                <td><span id="glucPoints">---</span></td>
+                            </tr>
+                            <tr>
+                                <td>Diabetes Mellitus en la familia</td>
+                                <td><span id="famLabel">---</span></td>
+                                <td><span id="famPoints">---</span></td>
+                            </tr>
+                        <tfoot>
+                            <td></td>
                             <td>
-                                IMC
-                                <table class="table">
-                                    <tr>
-                                        <th scope="row">Altura</th>
-                                        <td><span id="alturaLabel">---</span> m</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Peso</th>
-                                        <td><span id="pesoLabel">---</span> kg</td>
-                                    </tr>
-                                </table>
+                                <div style="text-align: center">Suma total:</div>
                             </td>
-                            <td><span id="imcLabel">---</span>kg/m²</td>
-                            <td><span id="imcPoints">---</span></td>
-                        </tr>
-                        <tr class="align-middle">
-                            <td>
-                                Perimetro abdominal
-                                <table class="table">
-                                    <tr>
-                                        <th scope="row">Perimetro</th>
-                                        <td><span id="ombligoLabel">---</span> cm</td>
-                                    </tr>
-                                    <!-- <tr>
-                                        <th scope="row">Sexo</th>
-                                        <td><span id="sexoLabel">---</span></td>
-                                    </tr> -->
-                                </table>
-                            </td>
-                            <td><span id="sexoLabel">---</span></td>
-                            <td><span id="ombligoPoints">---</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+                            <td><span id="total">---</span></td>
+                        </tfoot>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col">
+                    <!-- los params que faltan seleccionar, cuando todos esten seleccionados,
+                    usar este espacio para mostrar la tabla de resultados -->
+                    <table class="table table-secondary table-hover table-bordered text-center align-middle">
+                        <thead class="table-dark align-middle">
+                            <th>Puntuación total</th>
+                            <th>Riesgo de diabetes a 10 años</th>
+                            <th>Interpretación</th>
+                        </thead>
+                        <tbody>
+                            <tr id="row1">
+                                <td>
+                                    Menos de 7 puntos
+                                </td>
+                                <td>
+                                    1%
+                                </td>
+                                <td>
+                                    <!-- Nivel de riesgo bajo -->
+                                    <div class="progress" style="height: 30px;">
+                                        <div id="prg1" class="progress-bar"
+                                            role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
+                                            aria-valuemax="100">Nivel de riesgo bajo</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="row2">
+                                <td>
+                                    De 7 a 11 puntos
+                                </td>
+                                <td>
+                                    4%
+                                </td>
+                                <td>
+                                    <!-- Nivel de riesgo ligeramente elevado -->
+                                    <div class="progress" style="height: 30px;">
+                                        <div id="prg2" class="progress-bar"
+                                            role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
+                                            aria-valuemax="100">Nivel de riesgo ligeramente elevado</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="row3">
+                                <td>
+                                    De 12 a 14 puntos
+                                </td>
+                                <td>
+                                    17%
+                                </td>
+                                <td>
+                                    <!-- Nivel de riesgo moderado -->
+                                    <div class="progress" style="height: 30px;">
+                                        <div id="prg3" class="progress-bar"
+                                            role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
+                                            aria-valuemax="100">Nivel de riesgo moderado</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="row4">
+                                <td>
+                                    De 15 a 20 puntos
+                                </td>
+                                <td>
+                                    33%
+                                </td>
+                                <td>
+                                    <!-- Nivel de riesgo alto -->
+                                    <div class="progress" style="height: 30px;">
+                                        <div id="prg4" class="progress-bar"
+                                            role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
+                                            aria-valuemax="100">Nivel de riesgo alto</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="row5">
+                                <td>
+                                    Mas de 20 puntos
+                                </td>
+                                <td>
+                                    50%
+                                </td>
+                                <td>
+                                    <!-- Nivel de riesgo muy alto -->
+                                    <div class="progress" style="height: 30px;">
+                                        <div id="prg5" class="progress-bar"
+                                            role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
+                                            aria-valuemax="100">Nivel de riesgo muy alto</div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="col">
-                los params que faltan seleccionar, cuando todos esten seleccionados, 
-                usar este espacio para mostrar la tabla de resultados
-            </div>
+
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
         </div>
 
-        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
-    </div>
 
-
-    <script src="dist/modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="dist/modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="dist/modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <!-- endbuild -->
+        <script src="dist/modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="dist/modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="dist/modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <!-- endbuild -->
 
 </body>
 
@@ -265,110 +490,6 @@
     ctx.moveTo(0, 0);
     ctx.lineTo(200, 100);
     ctx.stroke();
-</script>
-
-<script>
-
-    function pointsEdad(valor) {
-        valor = parseInt(valor);
-        if (valor < 45) {
-            point = 0;
-        }
-        if (45 <= valor && valor <= 54) {
-            point = 2;
-        }
-        if (55 <= valor && valor <= 64) {
-            point = 3;
-        }
-        if (64 < valor) {
-            point = 4;
-        }
-        return point;
-    }
-
-    function pointsOmbligo(valor) {
-        var checked_gender = document.querySelector('input[name = "genderOpt"]:checked')
-        console.log(checked_gender.value, valor)
-        var point;
-        valor = parseInt(valor);
-        switch (checked_gender.value) {
-            case "Masculino":
-                if (valor < 94) {
-                    point = 0;
-                }
-                if (94 <= valor && valor <= 102) {
-                    point = 3;
-                }
-                if (102 < valor) {
-                    point = 4;
-                }
-                break;
-            case "Femenino":
-                if (valor < 80) {
-                    point = 0;
-                }
-                if (80 <= valor && valor <= 88) {
-                    point = 3;
-                }
-                if (88 < valor) {
-                    point = 4;
-                }
-                break;
-            default:
-                break;
-        }
-        return point;
-    }
-
-    var h = 0, w = 0, imc = 0;
-    function pointsIMC() {
-        h = parseFloat(document.getElementById("alturaRange").value);
-        w = parseFloat(document.getElementById("pesoRange").value);
-        imc = w / (h * h);
-        imc = Math.round((imc + 0.01 + Number.EPSILON) * 100) / 100
-        console.log(imc);
-        ///
-        target = document.getElementById("imcValue");
-        target.innerHTML = imc;
-        target = document.getElementById("imcLabel");
-        target.innerHTML = imc;
-        target = document.getElementById("imcPoints");
-        if (imc < 25) {
-            point = 0;
-        }
-        if (25 <= imc && imc <= 30) {
-            point = 1;
-        }
-        if (30 < imc) {
-            point = 3;
-        }
-        target.innerHTML = point;
-        return;
-    }
-
-    function cambio(label, valor) {
-        // console.log("suma")
-        console.log("cambiaso", label, "valor", valor)
-        var target = document.getElementById(label + "Label");
-        target.innerHTML = valor;
-        target = document.getElementById(label + "Points");
-        var point;
-        if (label == "altura" || label == "peso") {
-            pointsIMC();
-        }
-        switch (label) {
-            case "edad":
-                point = pointsEdad(valor);
-                target.innerHTML = point;
-                break;
-            case "ombligo":
-                point = pointsOmbligo(valor);
-                target.innerHTML = point;
-                break;
-        }
-        return;
-
-    }
 </script>
 
 </html>
