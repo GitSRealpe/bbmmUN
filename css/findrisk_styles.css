@@ -1,0 +1,128 @@
+@font-face {
+  font-family: Blogger_Sans-Bold;
+  src: url('../dist/fonts/blogger-sans/Blogger_Sans-Bold.otf');
+}
+
+@font-face {
+font-family: QuickSand;
+src: url('../dist/fonts/quicksand/Quicksand-Bold.ttf');
+}
+
+@font-face {
+  font-family: Dosis;
+  src: url('../dist/fonts/Dosis/static/Dosis-Bold.ttf');
+  }
+
+.tab{
+  margin-left: 8px;
+  color: #212529;
+  border-bottom: 1px ridge;
+}
+
+.table{
+  margin-bottom: 0px;
+}
+
+.bg-orange{
+  background-color: #fd7e14;
+}
+
+.row-header {
+  margin: 0px auto;
+  padding: 5px 5px;
+  border-top: 1px ridge; }
+
+.row-content {
+  margin: 0px auto;
+  padding: 0px 0px;
+  border-top: 1px ridge;
+   }
+
+.footer {
+  background-color: #bfb1a9;
+  margin: 0px auto;
+  padding: 20px 0px; }
+
+.jumbotron {
+  margin: 0px auto;
+  padding: 70px 30px;
+  background: #70106f;
+  color: floralwhite; }
+
+address {
+  font-size: 80%;
+  margin: 0px;
+  color: #0f0f0f; }
+
+body {
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+  font-family: Blogger_Sans-Bold;
+  background-color: rgb(109, 102, 89); }
+
+.container{
+  background-color: rgb(185, 174, 151);
+}
+
+.navbar-dark {
+  background-color: #740a0e; }
+
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px; }
+
+.carousel {
+  background: #585454; }
+  .carousel .carousel-item {
+    height: 100px; }
+    .carousel .carousel-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 300px; }
+
+#carouselButton {
+  right: 0px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1; }
+
+.modal .modal-header {
+  background: #740a0e;
+  color: floralwhite; }
+
+.modal .modal-body {
+  background: #bfb1a9; }
+
+.modal .close {
+  color: floralwhite; }
+
+.indicador_valor{
+  font-family: Dosis;
+  font-size: 150%;
+}
+
+.form-range::-webkit-slider-thumb {
+  background: green;
+}
+
+.form-range::-moz-range-thumb {
+  background: green;
+}
+
+.form-range::-ms-thumb {
+  background: green;
+}
+
+#steps_altura{
+  /* -webkit-transform:rotate(90deg); 
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);    */
+  max-width: 20%;
+  min-width: 2cm;
+}
+
