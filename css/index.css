@@ -1,0 +1,59 @@
+@font-face {
+    font-family: Blogger_Sans-Bold;
+    src: url('../dist/fonts/blogger-sans/Blogger_Sans-Bold.otf');
+}
+
+@font-face {
+    font-family: QuickSand;
+    src: url('../dist/fonts/quicksand/Quicksand-Bold.ttf');
+}
+
+@font-face {
+    font-family: Dosis;
+    src: url('../dist/fonts/Dosis/static/Dosis-Bold.ttf');
+}
+
+.bg-azulito {
+    background-color: #646ac7;
+}
+
+.tab {
+    margin-left: 8px;
+    color: #212529;
+    border-bottom: 1px ridge;
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+.footer {
+    background-color: #bfb1a9;
+    margin: 0px auto;
+    padding: 20px 0px;
+}
+
+address {
+    font-size: 80%;
+    margin: 0px;
+    color: #0f0f0f;
+}
+
+body {
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+    font-family: Blogger_Sans-Bold;
+    background-color: rgb(89, 89, 109);
+    position: relative;
+}
+
+.container-fluid {
+    background-color: rgb(154, 151, 185);
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
