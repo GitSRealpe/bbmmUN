@@ -12,483 +12,134 @@
     <link rel="stylesheet" href="dist/modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/styles_test.css">
+    <link rel="stylesheet" href="css/index.css">
     <!-- endbuild -->
 
-    <title>Calculadora</title>
+    <title>Proyecto Disbiosis, Obesidad y Diabetes</title>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="200">
 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <div class="sticky-top">
+                    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
+                        <h4>Navegación</h4>
+                        <hr>
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <!-- <a href="#" class="nav-link" aria-current="page"> -->
+                                <a href="#disbiosis" class="nav-link text-white">
+                                    Disbiosis
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#obesidad" class="nav-link text-white">
+                                    Obesidad
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#diabetes" class="nav-link text-white">
+                                    Diabetes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-    <div class="container">
-        <h1>Calculadora FINDRISC</h1>
-        <div class="row row-header">Info. Personal</div>
-        <div class="row align-items-center row-content">
-            <div class="col col-md-5 col-lg-3">
-                <a>Cuantos años tienes?</a>
+            <div class="col">
                 <div class="text-center">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Edad</span>
-                        <input type="number" id="edad" min="1" max="99" placeholder="..." class="form-control"
-                            aria-label="Edad" aria-describedby="basic-addon1" onchange="cambio('edad',this.value)">
-                    </div>
+                    <h1>Proyecto Disbiosis, Obesidad y Diabetes</h1>
                 </div>
 
-            </div>
-            <div class="col-7">
                 <div class="row">
-                    <div class="col col-sm-2">Sexo:</div>
-                    <div class="col-9">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="genderOpt" id="sexoRadio1"
-                                value="Masculino" onchange="cambio('sexo',this.value)">
-                            <label class="form-check-label" for="sexoRadio1">Masculino</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="genderOpt" id="sexoRadio2"
-                                value="Femenino" onchange="cambio('sexo',this.value)">
-                            <label class="form-check-label" for="sexoRadio2">Femenino</label>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row row-header">Medidas corporales</div>
-        <div class="row align-items-center row-content">
-            <div class="row">
-                <div class="col">
-                    <div class="row">
-                        <div class="col">
-                            <h4>Altura</h4>
-                            <div>Mide la altura desde la punta de tus pies a la cabeza, indica el valor abajo.</div>
-                            <div class="text-center">
-                                Altura: <span id="alturaValue" class="indicador_valor">---</span> metros.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">
-                            <span class="fa fa-arrow-circle-right fa-lg"></span>
-                        </div>
-                        <div class="col">
-                            <input type="range" min="1.00" max="2.00" step="0.01" class="form-range" id="alturaRange"
-                                onchange="cambio('altura',this.value)">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="media">
-                        <img src="img/giphy.gif" alt="gif_altura" class=" img-fluid" id="steps_altura" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="row">
-                        <div class="col">
-                            <h4>Perimetro abdominal</h4>
-                            <div>Mide al nivel del ombligo el tamaño de tu abdomen, ubica el valor abajo.</div>
-                            <div class="text-center">
-                                Perimetro: <span id="ombligoValue" class="indicador_valor">---</span> centimetros.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">
-                            <span class="fa fa-arrow-circle-right fa-lg"></span>
-                        </div>
-                        <div class="col">
-                            <input type="range" min="60" max="120" step="1" class="form-range" id="ombligoRange"
-                                onchange="cambio('ombligo',this.value)">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="media">
-                        <img src="img/giphy.gif" alt="gif_altura" class=" img-fluid" id="steps_altura" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="row">
-                        <div class="col">
-                            <h4>Peso</h4>
-                            <div>Mide tu peso, ubica el valor abajo.</div>
-                            <div class="text-center">
-                                Peso: <span id="pesoValue" class="indicador_valor">---</span> kilos.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">
-                            <span class="fa fa-arrow-circle-right fa-lg"></span>
-                        </div>
-                        <div class="col">
-                            <input type="range" min="40" max="150" step="1" class="form-range" id="pesoRange"
-                                onchange="cambio('peso',this.value)">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="media">
-                        <img src="img/giphy.gif" alt="gif_altura" class=" img-fluid" id="steps_altura" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <h4>Indice de Masa Corporal (IMC)</h4>
-                    Con la información de tu altura y el peso calculamos el indice de masa corporal que
-                    define...
-                    <div> Tu IMC: <span id="imcValue">1.60</span> kg/m².</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row row-header">Vida diaria
-            <div class="row align-items-center row-content">
-                Responde lo siguiente
-                <div class="row align-items-top">
-                    <div class="col-12 col-md-6">
-                        <h4>Actividad física</h4>
-                        ¿Realiza normalmente al menos 30 minutos diarios de actividad fisica?
-                        <div class="text-center">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="exerOpt" id="exerRadio1" value="Si"
-                                    onchange="cambio('exer',this.value)">
-                                <label class="form-check-label" for="exerRadio1">Si</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="exerOpt" id="exerRadio2" value="No"
-                                    onchange="cambio('exer',this.value)">
-                                <label class="form-check-label" for="exerRadio2">No</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <h4>Alimentación</h4>
-                        ¿Con qué frecuencia come frutas, verduras y hortalizas?
-                        <div class="text-center">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="frutasOpt" id="frutasRadio1"
-                                    value="Si" onchange="cambio('frutas',this.value)">
-                                <label class="form-check-label" for="frutasRadio1">A diario</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="frutasOpt" id="frutasRadio2"
-                                    value="No" onchange="cambio('frutas',this.value)">
-                                <label class="form-check-label" for="frutasRadio2">No a diario</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row row-header">
-            Historia médica
-            <div class="row align-items-center row-content">
-                Responde lo siguiente
-                <div class="row align-items-top">
-                    <div class="col-12 col-md-6">
-                        <h4>Medicación</h4>
-                        ¿Le han recetado alguna vez medicamentos contra la HTA?
-                        <div class="text-center">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="medsOpt" id="medsRadio1" value="Si"
-                                    onchange="cambio('meds',this.value)">
-                                <label class="form-check-label" for="medsRadio1">Si</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="medsOpt" id="medsRadio2" value="No"
-                                    onchange="cambio('meds',this.value)">
-                                <label class="form-check-label" for="medsRadio2">No</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <h4>Glucosa</h4>
-                        ¿Le han detectado alguna vez niveles altos de glucosa en la sangre?
-                        <div class="text-center">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="glucOpt" id="glucRadio1" value="Si"
-                                    onchange="cambio('gluc',this.value)">
-                                <label class="form-check-label" for="glucRadio1">Si</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="glucOpt" id="glucRadio2" value="No"
-                                    onchange="cambio('gluc',this.value)">
-                                <label class="form-check-label" for="glucRadio2">No</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row row-header">
-            Antecedentes familiares
-            <div class="row align-items-center row-content">
-                Responde lo siguiente
-                <div class="row align-items-top">
-                    <div class="col-12 col-md-6">
-                        <h4>Diabetes Mellitus en la familia</h4>
-                        ¿Ha habido algún diagnóstico de DM en su familia?
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="form-check ">
-                            <input class="form-check-input" type="radio" name="famOpt" id="famRadio1" value="No"
-                                onchange="cambio('fam',this.value)">
-                            <label class="form-check-label" for="famRadio1">No</label>
-                        </div>
-                        <div class="form-check ">
-                            <input class="form-check-input" type="radio" name="famOpt" id="famRadio2"
-                                value="Si:abuelos, tíos o primos hermanos" onchange="cambio('fam',this.value)">
-                            <label class="form-check-label" for="famRadio2">Si:abuelos, tíos o primos hermanos
-                                (sin contar padres, hermanos o hijos)</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="famOpt" id="famRadio3"
-                                value="Si: padres, hermanos o hijos" onchange="cambio('fam',this.value)">
-                            <label class="form-check-label" for="famRadio3">Si: padres, hermanos o hijos.</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <p>Tabla con la info respondida</p>
-            <div class="row">
-                <div class="col-sm-12 col-lg-6 ">
-                    <table class="table table-bordered table-success table-striped table-hover">
-                        <thead class="table-dark">
-                            <th>Parametro</th>
-                            <th>Dato</th>
-                            <th>Puntos</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <!-- <th scope="row">Edad</th> -->
-                                <td>Edad</td>
-                                <td><span id="edadLabel">---</span> años</td>
-                                <td><span id="edadPoints">---</span></td>
-                            </tr>
-                            <tr class="align-middle">
-                                <td>
-                                    IMC
-                                    <table class="table">
-                                        <tr>
-                                            <th scope="row">Altura</th>
-                                            <td><span id="alturaLabel">---</span> m</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Peso</th>
-                                            <td><span id="pesoLabel">---</span> kg</td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td><span id="imcLabel">---</span>kg/m²</td>
-                                <td><span id="imcPoints">---</span></td>
-                            </tr>
-                            <tr class="align-middle">
-                                <td>
-                                    Perimetro abdominal
-                                    <table class="table">
-                                        <tr>
-                                            <th scope="row">Perimetro</th>
-                                            <td><span id="ombligoLabel">---</span> cm</td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td><span id="sexoLabel">---</span></td>
-                                <td><span id="ombligoPoints">---</span></td>
-                            </tr>
-                            <tr class="align-middle">
-                                <td>Ejercicio diario</td>
-                                <td><span id="exerLabel">---</span></td>
-                                <td><span id="exerPoints">---</span></td>
-                            </tr>
-                            <tr>
-                                <td>Consumo, frutas, verduras y hortalizas</td>
-                                <td><span id="frutasLabel">---</span></td>
-                                <td><span id="frutasPoints">---</span></td>
-                            </tr>
-                            <tr>
-                                <td>Medicado/a contra la HTA</td>
-                                <td><span id="medsLabel">---</span></td>
-                                <td><span id="medsPoints">---</span></td>
-                            </tr>
-                            <tr>
-                                <td>Presentado niveles altos de glucosa</td>
-                                <td><span id="glucLabel">---</span></td>
-                                <td><span id="glucPoints">---</span></td>
-                            </tr>
-                            <tr>
-                                <td>Diabetes Mellitus en la familia</td>
-                                <td><span id="famLabel">---</span></td>
-                                <td><span id="famPoints">---</span></td>
-                            </tr>
-                        <tfoot>
-                            <td></td>
-                            <td>
-                                <div style="text-align: center">Suma total:</div>
-                            </td>
-                            <td><span id="total">---</span></td>
-                        </tfoot>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="col-sm-12 col-lg-6 ">
-                    <!-- los params que faltan seleccionar, cuando todos esten seleccionados,
-                    usar este espacio para mostrar la tabla de resultados -->
-                    <table class="table table-secondary table-hover table-bordered text-center align-middle">
-                        <thead class="table-dark align-middle">
-                            <th>Puntuación total</th>
-                            <th>Riesgo de diabetes a 10 años</th>
-                            <th>Interpretación</th>
-                        </thead>
-                        <tbody>
-                            <tr id="row1">
-                                <td>
-                                    Menos de 7 puntos
-                                </td>
-                                <td>
-                                    1%
-                                </td>
-                                <td>
-                                    Nivel de riesgo bajo
-                                    <div class="progress" style="height: 20px;">
-                                        <div id="prg1" class="progress-bar"
-                                            role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
+                    <div class="col">
+                        <div class="card mb-3 border-dark bg-azulito" style="max-width: 792px;">
+                            <h4 class="card-header bg-primary" id="disbiosis">¿Qué es Disbiosis?</h4>
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <!-- <h4 class="card-title" id="disbiosis">¿Qué es disbiosis?</h4> -->
+                                        <p class="card-text">
+                                            Disbiosis es un desequilibrio en el número y tipo de colonias bacterianas, hongos y parásitos que tiene el ser humano en su cuerpo. Nuestro énfasis son las bacterias intestinales ya que múltiples estudios han encontrado relación entre esta alteración
+                                            y enfermedades crónicas como obesidad, diabetes, depresión mayor, enfermedades.
+                                        </p>
                                     </div>
-                                </td>
-                            </tr>
-                            <tr id="row2">
-                                <td>
-                                    De 7 a 11 puntos
-                                </td>
-                                <td>
-                                    4%
-                                </td>
-                                <td>
-                                    Nivel de riesgo ligeramente elevado
-                                    <div class="progress" style="height: 20px;">
-                                        <div id="prg2" class="progress-bar"
-                                            role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr id="row3">
-                                <td>
-                                    De 12 a 14 puntos
-                                </td>
-                                <td>
-                                    17%
-                                </td>
-                                <td>
-                                    Nivel de riesgo moderado
-                                    <div class="progress" style="height: 20px;">
-                                        <div id="prg3" class="progress-bar"
-                                            role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr id="row4">
-                                <td>
-                                    De 15 a 20 puntos
-                                </td>
-                                <td>
-                                    33%
-                                </td>
-                                <td>
-                                    Nivel de riesgo alto
-                                    <div class="progress" style="height: 20px;">
-                                        <div id="prg4" class="progress-bar"
-                                            role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr id="row5">
-                                <td>
-                                    Mas de 20 puntos
-                                </td>
-                                <td>
-                                    50%
-                                </td>
-                                <td>
-                                    Nivel de riesgo muy alto
-                                    <div class="progress" style="height: 20px;">
-                                        <div id="prg5" class="progress-bar"
-                                            role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="img/balanza.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                <div class="row">
+                    <div class="col-12 col-md-9 offset-md-3">
+                        <div class="card mb-3 border-dark bg-azulito">
+                            <h4 class="card-header bg-primary" id="obesidad">¿Qué es Obesidad?</h4>
+                            <div class="row align-items-center">
+                                <div class="col-md-4">
+                                    <img src="img/obesidad.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body text-end">
+                                        <p class="card-text">
+                                            Es una enfermedad en la que se tiene exceso de grasa corporal como resultado de dietas no saludables, poca actividad física y en algunos casos herencia familiar. Esto afecta negativamente el funcionamiento de diferentes órganos como el corazón, los riñones,
+                                            las venas, las arterias, el hígado y el páncreas lo que aumenta el riesgo de tener otras enfermedades como diabetes, presión arterial alta y algunos tipos de cáncer.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-9">
+                        <div class="card mb-3 border-dark bg-azulito">
+                            <h4 class="card-header bg-primary" id="diabetes">¿Qué es Diabetes?</h4>
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Es una enfermedad metabólica crónica e incurable en la que se encuentran altas cantidades de glucosa (azúcar) en sangre debido a condiciones previas como la obesidad, la dieta no saludable y en algunos casos herencia familiar.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="img/glucosa_alta.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>Existen muchos tipos, nosotros nos enfocaremos en la tipo 2 la cual se produce porque las células del cuerpo tienen resistencia a la hormona insulina. El páncreas es el órgano encargado de secretar esta hormona que actúa haciendo
+                            que el azúcar entre a las células, pero las células no quieren escuchar a la insulina y eso genera los altos niveles de azúcar en la sangre.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/insulina.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                </div>
+
+            </div>
         </div>
 
+    </div>
 
-        <script src="dist/modules/jquery/dist/jquery.slim.min.js"></script>
-        <script src="dist/modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="dist/modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="js/scripts.js"></script>
-        <!-- endbuild -->
-
+    <script src="dist/modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="dist/modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="dist/modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <!-- endbuild -->
 </body>
-
-<script>
-    var elem = document.getElementById("alturaRange");
-    var elem2 = document.getElementById("ombligoRange");
-    var elem3 = document.getElementById("pesoRange");
-    var rangeValue = function () {
-        console.log(this.id)
-        // var newValue = elem.value;
-        var newValue = document.getElementById(this.id).value;
-        var target;
-        switch (this.id) {
-            case "alturaRange":
-                target = document.getElementById("alturaValue");
-                break;
-            case "ombligoRange":
-                target = document.getElementById("ombligoValue");
-                break;
-            case "pesoRange":
-                target = document.getElementById("pesoValue");
-                break;
-            default:
-                break;
-        }
-        target.innerHTML = newValue;
-    }
-    elem.addEventListener("input", rangeValue);
-    elem2.addEventListener("input", rangeValue);
-    elem3.addEventListener("input", rangeValue);
-</script>
-
-<script>
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    ctx.moveTo(0, 0);
-    ctx.lineTo(200, 100);
-    ctx.stroke();
-</script>
 
 </html>
