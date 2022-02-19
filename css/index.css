@@ -30,8 +30,12 @@
 }
 
 .row-content {
-    background-color: #56b6de;
-    /* font-size: 2.68em; */
+    /* background-color: #56b6de; */
+    padding: 0px;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-image: url("../assets/ola_border.png") 85 repeat;
 }
 
 body {
@@ -49,5 +53,11 @@ body {
 @media screen and (min-width: 800px) {
     .row-content {
         font-size: 26.8px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .row-content {
+        border-left: none;
     }
 }
