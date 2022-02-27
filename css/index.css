@@ -109,6 +109,10 @@ body {
         text-align: center;
         font-size: 35.7px;
     }
+    .obesidad {
+        text-align: center;
+        font-size: 22.7px;
+    }
 }
 
 @media screen and (max-width: 992px) {
