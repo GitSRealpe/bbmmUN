@@ -81,7 +81,8 @@ body {
 
 .caja {
     position: relative;
-    text-align: center;
+    /* text-align: center; */
+    /* border-bottom: 4px dotted #ffeae0 */
 }
 
 .centered {
@@ -104,6 +105,10 @@ body {
     #glucosa {
         text-align: center;
     }
+    #diabetes {
+        text-align: center;
+        font-size: 35.7px;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -124,6 +129,7 @@ body {
     }
     .banner {
         height: 100px;
+        object-fit: cover;
     }
 }
 
@@ -142,4 +148,7 @@ body {
     #glucosa {
         text-align: left;
     }
+    /* #diabetes {
+        font-size: 17.5px;
+    } */
 }
