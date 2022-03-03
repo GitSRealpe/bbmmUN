@@ -92,7 +92,13 @@ body {
     transform: translate(-50%, -50%);
 }
 
-@media screen and (min-width: 992px) {
+.oyd {
+    font-family: 'Brush Script MT', cursive;
+    font-weight: 900;
+    /* font-size: 30px; */
+}
+
+@media screen and (min-width: 1200px) {
     #waves.recuadro {
         font-size: 26.8px;
     }
@@ -107,11 +113,48 @@ body {
     }
     #diabetes {
         text-align: center;
-        font-size: 35.7px;
+        font-size: 22.7px;
+    }
+    .obesidad {
+        text-align: center;
+        font-size: 28.7px;
+    }
+    .disbiosis {
+        text-align: center;
+        font-size: 28.7px;
+    }
+    .tripas {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #waves.recuadro {
+        font-size: 26.8px;
+    }
+    #marco.recuadro {
+        font-size: 25.1px;
+    }
+    #nubes.recuadro {
+        font-size: 40.5px;
+    }
+    #glucosa {
+        text-align: center;
+    }
+    #diabetes {
+        text-align: center;
+        font-size: 22.7px;
     }
     .obesidad {
         text-align: center;
         font-size: 22.7px;
+    }
+    .disbiosis {
+        text-align: center;
+        font-size: 22.7px;
+    }
+    .tripas {
+        width: 60%;
     }
 }
 
@@ -121,6 +164,9 @@ body {
     }
     #glucosa {
         text-align: center;
+    }
+    .tripas {
+        width: 70%;
     }
 }
 
