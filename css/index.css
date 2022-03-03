@@ -98,6 +98,9 @@ body {
     /* font-size: 30px; */
 }
 
+
+/* xl and beyond */
+
 @media screen and (min-width: 1200px) {
     #waves.recuadro {
         font-size: 26.8px;
@@ -127,6 +130,9 @@ body {
         width: 60%;
     }
 }
+
+
+/* lg */
 
 @media screen and (max-width: 1200px) {
     #waves.recuadro {
@@ -158,6 +164,9 @@ body {
     }
 }
 
+
+/* md */
+
 @media screen and (max-width: 992px) {
     #nubes.recuadro {
         font-size: 30.5px;
@@ -166,9 +175,12 @@ body {
         text-align: center;
     }
     .tripas {
-        width: 70%;
+        width: 90%;
     }
 }
+
+
+/* sm */
 
 @media screen and (max-width: 768px) {
     #nubes.recuadro {
@@ -182,6 +194,9 @@ body {
         object-fit: cover;
     }
 }
+
+
+/* xs */
 
 @media screen and (max-width: 576px) {
     #waves.recuadro {
