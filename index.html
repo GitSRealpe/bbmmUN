@@ -10,16 +10,22 @@
     <!-- Bootstrap CSS -->
     <!-- build:css css/main.css -->
     <link rel="stylesheet" href="dist/modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="dist/modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animaciones.css">
     <!-- endbuild -->
+
+    <script src="dist/modules/scrollmagic/gsap.min.js"></script>
+    <script src="dist/modules/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="dist/modules/scrollmagic/plugins/animation.gsap.min.js"></script>
+    <script src="dist/modules/scrollmagic/plugins/debug.addIndicators.min.js"></script>
+    <script src="js/index.js "></script>
 
     <title>Proyecto Disbiosis, Obesidad y Diabetes</title>
 </head>
 
 <body>
-    <p class="sticky-top text-white" id="medidas">asasas</p>
+    <p class="sticky-top text-white" id="medidas">medidas</p>
     <!-- <div class="container-fluid"> -->
     <div class="container">
         <div class="row">
@@ -27,7 +33,6 @@
                 <h1>Proyecto Disbiosis, Obesidad y Diabetes</h1>
             </div>
         </div>
-
         <div class="row justify-content-evenly">
             <h1 class="text-center" style="color: #7ddcfa;">¿QUE ES DISBIOSIS?</h1>
             <div class="col-6 align-self-center text-white" style="padding-right: 0;">
@@ -63,8 +68,9 @@
             <!-- <div class="d-none d-sm-block col-sm-5 col-md-5">
                 <img src="img/obesidad.png " class="img-fluid" alt="glucosa_img ">
             </div> -->
-            <div class="col-6 col-sm-5 col-md-5" style="padding-right: 0;">
-                <img src="img/obesidad.png " class="img-fluid" alt="glucosa_img ">
+            <div id="trigger1"></div>
+            <div class="col-6 col-sm-5 col-md-5" style="padding-right: 0;" id="reveal1">
+                <img src="img/obesidad.png " class="img-fluid" alt="obeso">
             </div>
             <div class="col text-white" style="padding: 0px 0px 0px 3px;">
                 <!-- <img src="img/obesidad.png " class="col-6 d-sm-none float-start" alt="glucosa_img "> -->
@@ -216,7 +222,6 @@
     <script src="dist/modules/jquery/dist/jquery.slim.min.js "></script>
     <script src="dist/modules/popper.js/dist/umd/popper.min.js "></script>
     <script src="dist/modules/bootstrap/dist/js/bootstrap.min.js "></script>
-    <script src="js/index.js "></script>
     <!-- endbuild -->
 </body>
 
