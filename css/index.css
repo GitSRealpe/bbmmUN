@@ -92,10 +92,35 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.top {
+    text-align: left;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.bottom {
+    /* text-align: left; */
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    background-color: black;
+    box-shadow: 10px 10px #233dff;
+}
+
 .oyd {
     font-family: 'Brush Script MT', cursive;
     font-weight: 900;
     /* font-size: 30px; */
+}
+
+#angulo {
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    transform: rotate(-15);
+    font-size: 30px;
 }
 
 
@@ -171,9 +196,6 @@ body {
     #nubes.recuadro {
         font-size: 30.5px;
     }
-    #glucosa {
-        text-align: center;
-    }
     .tripas {
         width: 90%;
     }
@@ -185,9 +207,6 @@ body {
 @media screen and (max-width: 768px) {
     #nubes.recuadro {
         font-size: 30.5px;
-    }
-    #glucosa {
-        text-align: center;
     }
     .banner {
         height: 100px;
@@ -213,7 +232,4 @@ body {
     #glucosa {
         text-align: left;
     }
-    /* #diabetes {
-        font-size: 17.5px;
-    } */
 }
