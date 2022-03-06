@@ -1,16 +1,26 @@
 @font-face {
-    font-family: Blogger_Sans-Bold;
-    src: url('../dist/fonts/blogger-sans/Blogger_Sans-Bold.otf');
+    font-family: Candal;
+    src: url('../dist/fonts/Candal/Candal-Regular.ttf');
 }
 
 @font-face {
-    font-family: QuickSand;
-    src: url('../dist/fonts/quicksand/Quicksand-Bold.ttf');
+    font-family: Alike;
+    src: url('../dist/fonts/Alike/Alike-Regular.ttf');
 }
 
 @font-face {
-    font-family: Dosis;
-    src: url('../dist/fonts/Dosis/static/Dosis-Bold.ttf');
+    font-family: OleoScript;
+    src: url('../dist/fonts/Oleo_Script/OleoScript-Bold.ttf');
+}
+
+@font-face {
+    font-family: Colo-pro;
+    src: url('../dist/fonts/colo-pro/Colo-Pro.otf');
+}
+
+@font-face {
+    font-family: CabinSketch;
+    src: url('../dist/fonts/Cabin_Sketch/CabinSketch-Regular.ttf');
 }
 
 body {
@@ -18,6 +28,23 @@ body {
     z-index: 0;
     background-color: #004aad;
     position: relative;
+}
+
+h1 {
+    font-family: Candal;
+}
+
+h2 {
+    font-family: Candal;
+}
+
+p {
+    font-family: Alike;
+}
+
+#whatdoing {
+    font-family: CabinSketch;
+    color: #ffde59;
 }
 
 #waves.recuadro {
@@ -66,8 +93,6 @@ body {
     margin: 0;
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
-    /* border-left: 30px solid transparent; */
-    /* border-right: 30px solid transparent; */
     border-image: url("../assets/patron.png") repeat;
     border-image-slice: 40;
     border-image-width: 1;
@@ -109,7 +134,7 @@ body {
 }
 
 .oyd {
-    font-family: 'Brush Script MT', cursive;
+    font-family: OleoScript;
     font-weight: 900;
     /* font-size: 30px; */
 }
@@ -121,6 +146,26 @@ body {
     -o-transform: rotate(-15deg);
     transform: rotate(-15);
     font-size: 30px;
+}
+
+.neon {
+    font-size: 40px;
+    font-family: Colo-pro;
+}
+
+#primero {
+    color: #ffcece;
+    text-shadow: 0 0 7px #ff9999, 0 0 10px #ff9999, 0 0 21px #ff9999, 0 0 22px #ff0000, 0 0 42px #ff0000, 0 0 72px #ff0000, 0 0 92px #ff0000;
+}
+
+#segundo {
+    color: #ffface;
+    text-shadow: 0 0 7px #ffcc99, 0 0 10px #ffcc99, 0 0 21px #ffcc99, 0 0 22px #ffe600, 0 0 42px #ffe600, 0 0 72px #ffe600, 0 0 92px #ffe600;
+}
+
+#tercero {
+    color: #ffffff;
+    text-shadow: 0 0 7px #ffffff, 0 0 10px #ffffff, 0 0 21px #ffffff, 0 0 22px #dfdfdf, 0 0 42px #dfdfdf, 0 0 72px #dfdfdf, 0 0 92px #dfdfdf;
 }
 
 
