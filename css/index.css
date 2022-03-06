@@ -155,17 +155,20 @@ p {
 
 #primero {
     color: #ffcece;
-    text-shadow: 0 0 7px #ff9999, 0 0 10px #ff9999, 0 0 21px #ff9999, 0 0 22px #ff0000, 0 0 42px #ff0000, 0 0 72px #ff0000, 0 0 92px #ff0000;
+    /* text-shadow: 0 0 7px #ff9999, 0 0 10px #ff9999, 0 0 21px #ff9999, 0 0 22px #ff0000, 0 0 42px #ff0000, 0 0 72px #ff0000, 0 0 92px #ff0000; */
+    text-shadow: 0 0 7px #ff9999, 0 0 10px #ff9999, 0 0 21px #ff9999;
 }
 
 #segundo {
     color: #ffface;
-    text-shadow: 0 0 7px #ffcc99, 0 0 10px #ffcc99, 0 0 21px #ffcc99, 0 0 22px #ffe600, 0 0 42px #ffe600, 0 0 72px #ffe600, 0 0 92px #ffe600;
+    /* text-shadow: 0 0 7px #ffcc99, 0 0 10px #ffcc99, 0 0 21px #ffcc99, 0 0 22px #ffe600, 0 0 42px #ffe600, 0 0 72px #ffe600, 0 0 92px #ffe600; */
+    text-shadow: 0 0 7px #ffcc99, 0 0 10px #ffcc99, 0 0 21px #ffcc99;
 }
 
 #tercero {
     color: #ffffff;
-    text-shadow: 0 0 7px #ffffff, 0 0 10px #ffffff, 0 0 21px #ffffff, 0 0 22px #dfdfdf, 0 0 42px #dfdfdf, 0 0 72px #dfdfdf, 0 0 92px #dfdfdf;
+    /* text-shadow: 0 0 7px #ffffff, 0 0 10px #ffffff, 0 0 21px #ffffff, 0 0 22px #dfdfdf, 0 0 42px #dfdfdf, 0 0 72px #dfdfdf, 0 0 92px #dfdfdf; */
+    text-shadow: 0 0 7px #ffffff, 0 0 10px #ffffff, 0 0 21px #ffffff;
 }
 
 
