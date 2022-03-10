@@ -26,8 +26,9 @@
 body {
     /* padding: 50px 0px 0px 0px; */
     z-index: 0;
-    background-color: #004aad;
+    /* background-color: #004aad; */
     position: relative;
+    background-image: url("../assets/patternpad.svg");
 }
 
 h1 {
@@ -42,18 +43,27 @@ p {
     font-family: Alike;
 }
 
-.titulo {
-    background-image: url("../assets/squircle.svg");
-    background-repeat: no-repeat;
-    /* background-position: 0px -50px; */
-    /* background: #0F2027;
+
+/* .titulo {
+    background-position: 0px -50px;
+    background: #0F2027;
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); */
-}
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+} */
 
 .oyd {
+    color: white;
+    text-align: center;
     font-family: OleoScript;
     font-weight: 900;
+}
+
+.obesidad {
+    color: white;
+}
+
+.disbiosis {
+    color: white;
 }
 
 #whatdoing {
@@ -190,6 +200,12 @@ p {
     .arrow {
         width: 50px;
     }
+    .obeso {
+        width: 35%;
+    }
+    .tripas {
+        width: 70%;
+    }
     #waves.recuadro {
         font-size: 26.8px;
     }
@@ -213,9 +229,6 @@ p {
     .disbiosis {
         text-align: center;
         font-size: 28.7px;
-    }
-    .tripas {
-        width: 60%;
     }
 }
 
@@ -231,6 +244,17 @@ p {
     .arrow {
         width: 50px;
     }
+    .disbiosis {
+        text-align: center;
+        font-size: 22.7px;
+    }
+    .tripas {
+        width: 70%;
+    }
+    .obesidad {
+        text-align: center;
+        font-size: 22.7px;
+    }
     #waves.recuadro {
         font-size: 26.8px;
     }
@@ -246,17 +270,6 @@ p {
     #diabetes {
         text-align: center;
         font-size: 22.7px;
-    }
-    .obesidad {
-        text-align: center;
-        font-size: 22.7px;
-    }
-    .disbiosis {
-        text-align: center;
-        font-size: 22.7px;
-    }
-    .tripas {
-        width: 60%;
     }
 }
 
@@ -292,6 +305,12 @@ p {
     .arrow {
         width: 40px;
     }
+    .disbiosis {
+        text-align: left;
+    }
+    .tripas {
+        width: 100%;
+    }
     #nubes.recuadro {
         font-size: 30.5px;
     }
@@ -305,6 +324,9 @@ p {
 /* xs */
 
 @media screen and (max-width: 576px) {
+    body {
+        font-size: 16px;
+    }
     .top {
         top: 15%;
         left: 5%;
@@ -319,6 +341,17 @@ p {
     }
     .arrow {
         width: 35px;
+    }
+    .tripas {
+        width: 90%;
+    }
+    .obesidad {
+        text-align: right;
+        font-size: 16px;
+    }
+    .disbiosis {
+        text-align: left;
+        font-size: 16px;
     }
     #waves.recuadro {
         border-left: none;
