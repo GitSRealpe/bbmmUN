@@ -24,24 +24,22 @@ function resized() {
 window.onload = function() {
     window.addEventListener('resize', resized);
     resized();
-
     // init controller
     var controller = new ScrollMagic.Controller();
-
-    let elems = [".obeso", ".obesidad"];
-    // build scene
-    for (let i = 0; i < elems.length; i++) {
+    const triggers = { trigger1: [".disbioso", ".disbiosis"], trigger2: [".obeso", ".obesidad"], trigger3: [".diabeto", ".diabetes"] };
+    for (let trigger in triggers) {
+        console.log(trigger)
+        console.log(triggers[trigger])
         new ScrollMagic.Scene({
-                triggerElement: "#trigger1",
+                triggerElement: "#" + trigger,
                 triggerHook: 0.7, // show, when scrolled 10% into view
                 // duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
                 offset: 70 // move trigger to center of element
             })
-            .setClassToggle(elems[i], "visible") // add class to reveal
+            .setClassToggle(triggers[trigger].toString(), "visible") // add class to reveal
             .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
     }
-
 
     // get all slides
     var slides = document.querySelectorAll("section.panel");
