@@ -193,6 +193,10 @@ p {
     text-shadow: 0 0 7px #ffffff, 0 0 10px #ffffff, 0 0 21px #ffffff;
 }
 
+.bkgd {
+    background-image: url("../assets/patternpad.svg");
+}
+
 
 /* xl and beyond */
 
