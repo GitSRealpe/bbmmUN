@@ -10,7 +10,6 @@
     <!-- Bootstrap CSS -->
     <!-- build:css css/main.css -->
     <link rel="stylesheet" href="dist/modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="dist/modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/findrisk_styles.css">
     <!-- endbuild -->
@@ -33,9 +32,9 @@
                 </div>
 
             </div>
-            <div class="col-7">
+            <div class="col-6">
                 <div class="row">
-                    <div class="col col-sm-2">Sexo:</div>
+                    <div class="col col-sm-2" style="margin-left: 16px;">Sexo:</div>
                     <div class="col-9">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="genderOpt" id="sexoRadio1" value="Masculino" onchange="cambio('sexo',this.value)">
@@ -64,9 +63,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-1">
+                        <!-- <div class="col-1">
                             <span class="fa fa-arrow-circle-right fa-lg"></span>
-                        </div>
+                        </div> -->
                         <div class="col">
                             <input type="range" min="1.00" max="2.00" step="0.01" class="form-range" id="alturaRange" onchange="cambio('altura',this.value)">
                         </div>
@@ -91,9 +90,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-1">
+                        <!-- <div class="col-1">
                             <span class="fa fa-arrow-circle-right fa-lg"></span>
-                        </div>
+                        </div> -->
                         <div class="col">
                             <input type="range" min="60" max="120" step="1" class="form-range" id="ombligoRange" onchange="cambio('ombligo',this.value)">
                         </div>
@@ -118,9 +117,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-1">
+                        <!-- <div class="col-1">
                             <span class="fa fa-arrow-circle-right fa-lg"></span>
-                        </div>
+                        </div> -->
                         <div class="col">
                             <input type="range" min="40" max="150" step="1" class="form-range" id="pesoRange" onchange="cambio('peso',this.value)">
                         </div>
