@@ -52,18 +52,22 @@ p {
 } */
 
 .oyd {
-    color: white;
+    color: wheat;
     text-align: center;
     font-family: OleoScript;
     font-weight: 900;
 }
 
 .obesidad {
-    color: white;
+    color: wheat;
 }
 
 .disbiosis {
-    color: white;
+    color: wheat;
+}
+
+.diabetes {
+    color: wheat;
 }
 
 #whatdoing {
@@ -86,7 +90,7 @@ p {
 }
 
 #waves>p {
-    background-color: #56b6de;
+    background-color: #57a6e4;
     margin-bottom: 0px;
     padding: 0px 16px;
 }
@@ -147,6 +151,7 @@ p {
 }
 
 .top {
+    color: wheat;
     text-align: left;
     position: absolute;
     top: 10%;
@@ -200,11 +205,23 @@ p {
     .arrow {
         width: 50px;
     }
+    .tripas {
+        width: 70%;
+    }
+    .disbiosis {
+        text-align: center;
+        font-size: 28.7px;
+    }
     .obeso {
         width: 35%;
     }
-    .tripas {
-        width: 70%;
+    .obesidad {
+        text-align: center;
+        font-size: 28.7px;
+    }
+    .diabetes {
+        text-align: center;
+        font-size: 28.7px;
     }
     #waves.recuadro {
         font-size: 26.8px;
@@ -217,18 +234,6 @@ p {
     }
     #glucosa {
         text-align: center;
-    }
-    #diabetes {
-        text-align: center;
-        font-size: 22.7px;
-    }
-    .obesidad {
-        text-align: center;
-        font-size: 28.7px;
-    }
-    .disbiosis {
-        text-align: center;
-        font-size: 28.7px;
     }
 }
 
@@ -255,6 +260,10 @@ p {
         text-align: center;
         font-size: 22.7px;
     }
+    .diabetes {
+        text-align: center;
+        font-size: 22.7px;
+    }
     #waves.recuadro {
         font-size: 26.8px;
     }
@@ -266,10 +275,6 @@ p {
     }
     #glucosa {
         text-align: center;
-    }
-    #diabetes {
-        text-align: center;
-        font-size: 22.7px;
     }
 }
 
@@ -345,12 +350,16 @@ p {
     .tripas {
         width: 90%;
     }
+    .disbiosis {
+        text-align: left;
+        font-size: 16px;
+    }
     .obesidad {
         text-align: right;
         font-size: 16px;
     }
-    .disbiosis {
-        text-align: left;
+    .diabetes {
+        text-align: center;
         font-size: 16px;
     }
     #waves.recuadro {
