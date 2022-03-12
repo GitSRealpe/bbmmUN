@@ -92,7 +92,9 @@ p {
 #waves>p {
     background-color: #57a6e4;
     margin-bottom: 0px;
+    padding: 5px;
     color: white;
+    text-align: center;
 }
 
 #marco.recuadro {
@@ -101,7 +103,7 @@ p {
 
 #marco>p {
     margin-bottom: 0px;
-    padding: 0px 16px;
+    padding: 0px;
 }
 
 #nubes.recuadro {
@@ -133,7 +135,7 @@ p {
 }
 
 .top {
-    color: wheat;
+    color: white;
     text-align: left;
     position: absolute;
     top: 10%;
@@ -176,7 +178,10 @@ p {
 }
 
 .bkgd {
-    background-image: url("../assets/patternpad.svg");
+    /* background-image: url("../assets/patternpad.svg"); */
+    background-color: #233dff;
+    /* margin-bottom: 32px; */
+    margin: 0px -12px 32px -12px;
 }
 
 
@@ -194,31 +199,23 @@ p {
     .tripas {
         width: 70%;
     }
+    p {
+        font-size: 28px;
+    }
     .disbiosis {
         text-align: center;
-        font-size: 28.7px;
     }
     .obeso {
         width: 35%;
     }
     .obesidad {
         text-align: center;
-        font-size: 28.7px;
     }
     .diabetes {
         text-align: center;
-        font-size: 28.7px;
-    }
-    #waves.recuadro {
-        font-size: 26.8px;
-    }
-    #marco.recuadro {
-        font-size: 25.1px;
-    }
-    #nubes.recuadro {
-        font-size: 40.5px;
     }
     #glucosa {
+        font-size: 35px;
         text-align: center;
     }
 }
@@ -227,6 +224,9 @@ p {
 /* lg */
 
 @media screen and (max-width: 1200px) {
+    p {
+        font-size: 22px;
+    }
     .top {
         top: 10%;
         left: 5%;
@@ -237,29 +237,21 @@ p {
     }
     .disbiosis {
         text-align: center;
-        font-size: 22.7px;
+        /* font-size: 22.7px; */
     }
     .tripas {
         width: 70%;
     }
     .obesidad {
         text-align: center;
-        font-size: 22.7px;
+        /* font-size: 22.7px; */
     }
     .diabetes {
         text-align: center;
-        font-size: 22.7px;
-    }
-    #waves.recuadro {
-        font-size: 22.7px;
-    }
-    #marco.recuadro {
-        font-size: 25.1px;
-    }
-    #nubes.recuadro {
-        font-size: 40.5px;
+        /* font-size: 22.7px; */
     }
     #glucosa {
+        font-size: 28px;
         text-align: center;
     }
 }
@@ -279,6 +271,9 @@ p {
     .tripas {
         width: 90%;
     }
+    .diabetes {
+        text-align: center;
+    }
     #nubes.recuadro {
         font-size: 30.5px;
     }
@@ -296,31 +291,28 @@ p {
     .arrow {
         width: 40px;
     }
-    .disbiosis {
-        text-align: left;
-    }
     .tripas {
         width: 100%;
     }
+    p {
+        font-size: 18px;
+    }
     .disbiosis {
         text-align: left;
-        font-size: 16px;
     }
     .obesidad {
         text-align: right;
-        font-size: 16px;
     }
     .diabetes {
         text-align: center;
-        font-size: 18px;
     }
-    #waves.recuadro {
-        font-size: 18px;
+    #waves.recuadro,
+    #nubes.recuadro {
         border-left: none;
         border-right: none;
     }
-    #nubes.recuadro {
-        font-size: 30.5px;
+    #glucosa {
+        font-size: 22px;
     }
     .banner {
         height: 100px;
@@ -332,9 +324,6 @@ p {
 /* xs */
 
 @media screen and (max-width: 576px) {
-    body {
-        font-size: 16px;
-    }
     .top {
         top: 15%;
         left: 5%;
@@ -353,15 +342,27 @@ p {
     .tripas {
         width: 90%;
     }
+    p {
+        font-size: 16px;
+    }
+    .disbiosis {
+        text-align: left;
+    }
+    .obesidad {
+        text-align: right;
+    }
+    .diabetes {
+        text-align: left;
+    }
+    #waves.recuadro,
     #nubes.recuadro {
         border-left: none;
         border-right: none;
     }
-    #nubes.recuadro {
-        font-size: 15.5px;
-    }
     #glucosa {
-        text-align: left;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 0px;
     }
 }
 
