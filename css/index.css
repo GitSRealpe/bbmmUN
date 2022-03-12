@@ -80,27 +80,22 @@ p {
     font-family: Colo-pro;
 }
 
-#waves.recuadro {
+.recuadro {
     padding: 0px;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
+    border: 30px solid transparent;
+}
+
+#waves.recuadro {
     border-image: url("../assets/border2.png") 85 round;
 }
 
 #waves>p {
     background-color: #57a6e4;
     margin-bottom: 0px;
-    padding: 0px 16px;
+    color: white;
 }
 
 #marco.recuadro {
-    padding: 0px;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
     border-image: url("../assets/lines.png") 50 round;
 }
 
@@ -110,29 +105,16 @@ p {
 }
 
 #nubes.recuadro {
-    padding: 0px;
-    margin: 0;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    border-image: url("../assets/nubes.png") round;
-    border-image-slice: 40;
-    border-image-width: 1;
+    border-image: url("../assets/nubes.png") 40 round;
+    /* border-image-width: 1; */
 }
 
 #patron.recuadro {
-    padding: 0px;
-    margin: 0;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-image: url("../assets/patron.png") repeat;
-    border-image-slice: 40;
-    border-image-width: 1;
+    border-image: url("../assets/patron.png") 40 repeat;
+    /* border-image-width: 1; */
 }
 
 #patron>h1 {
-    background-color: #6cdcff;
     margin-bottom: 0px;
     padding: 0px 16px;
 }
@@ -269,7 +251,7 @@ p {
         font-size: 22.7px;
     }
     #waves.recuadro {
-        font-size: 26.8px;
+        font-size: 22.7px;
     }
     #marco.recuadro {
         font-size: 25.1px;
@@ -294,11 +276,11 @@ p {
     .arrow {
         width: 50px;
     }
-    #nubes.recuadro {
-        font-size: 30.5px;
-    }
     .tripas {
         width: 90%;
+    }
+    #nubes.recuadro {
+        font-size: 30.5px;
     }
 }
 
@@ -319,6 +301,23 @@ p {
     }
     .tripas {
         width: 100%;
+    }
+    .disbiosis {
+        text-align: left;
+        font-size: 16px;
+    }
+    .obesidad {
+        text-align: right;
+        font-size: 16px;
+    }
+    .diabetes {
+        text-align: center;
+        font-size: 18px;
+    }
+    #waves.recuadro {
+        font-size: 18px;
+        border-left: none;
+        border-right: none;
     }
     #nubes.recuadro {
         font-size: 30.5px;
@@ -353,22 +352,6 @@ p {
     }
     .tripas {
         width: 90%;
-    }
-    .disbiosis {
-        text-align: left;
-        font-size: 16px;
-    }
-    .obesidad {
-        text-align: right;
-        font-size: 16px;
-    }
-    .diabetes {
-        text-align: center;
-        font-size: 16px;
-    }
-    #waves.recuadro {
-        border-left: none;
-        border-right: none;
     }
     #nubes.recuadro {
         border-left: none;
