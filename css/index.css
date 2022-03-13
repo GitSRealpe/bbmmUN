@@ -178,8 +178,8 @@ p {
 }
 
 .bkgd {
-    background-image: url("../assets/patternpad.svg");
-    /* background-color: #233dff; */
+    /* background-image: url("../assets/patternpad.svg"); */
+    background-color: #233dff;
     margin: 0px -12px 32px -12px;
 }
 
@@ -252,6 +252,9 @@ p {
     #glucosa {
         font-size: 28px;
         text-align: center;
+    }
+    .bkgd {
+        margin-bottom: 60px;
     }
 }
 

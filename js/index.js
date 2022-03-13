@@ -48,7 +48,7 @@ window.onload = function() {
         new ScrollMagic.Scene({
                 triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
                 offset: 50, // start a little later
-                triggerHook: 0.75,
+                triggerHook: 0.8,
             })
             .setClassToggle(revealElements[i], "visible") // add class toggle
             .addIndicators({ name: "facts " + (i + 1) }) // add indicators (requires plugin)
@@ -59,7 +59,7 @@ window.onload = function() {
     var slides = document.querySelectorAll("section.panel");
     // create scene for every slide
     // hacer lista de triggers para cada row con diferentes durations=tamaño
-    untriggers = ["50%", "100%", "100%", "1"];
+    untriggers = ["70%", "100%", "100%", "1"];
     for (var i = 0; i < slides.length; i++) {
         new ScrollMagic.Scene({
                 triggerElement: slides[i],
