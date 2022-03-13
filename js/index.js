@@ -41,16 +41,30 @@ window.onload = function() {
             .addTo(controller);
     }
 
+    // build scenes
+    var revealElements = document.getElementsByClassName("facts");
+    console.log(revealElements)
+    for (var i = 0; i < revealElements.length; i++) { // create a scene for each element
+        new ScrollMagic.Scene({
+                triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+                offset: 50, // start a little later
+                triggerHook: 0.75,
+            })
+            .setClassToggle(revealElements[i], "visible") // add class toggle
+            .addIndicators({ name: "facts " + (i + 1) }) // add indicators (requires plugin)
+            .addTo(controller);
+    }
+
     // get all slides
     var slides = document.querySelectorAll("section.panel");
-
     // create scene for every slide
     // hacer lista de triggers para cada row con diferentes durations=tamaño
+    untriggers = ["50%", "100%", "100%", "1"];
     for (var i = 0; i < slides.length; i++) {
         new ScrollMagic.Scene({
                 triggerElement: slides[i],
                 triggerHook: 'onLeave',
-                duration: "100%"
+                duration: untriggers[i]
             })
             .setPin(slides[i], { pushFollowers: false })
             .addIndicators() // add indicators (requires plugin)

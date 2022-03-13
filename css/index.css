@@ -178,9 +178,8 @@ p {
 }
 
 .bkgd {
-    /* background-image: url("../assets/patternpad.svg"); */
-    background-color: #233dff;
-    /* margin-bottom: 32px; */
+    background-image: url("../assets/patternpad.svg");
+    /* background-color: #233dff; */
     margin: 0px -12px 32px -12px;
 }
 
