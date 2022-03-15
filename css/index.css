@@ -3,10 +3,11 @@
     src: url('../dist/fonts/Candal/Candal-Regular.ttf');
 }
 
-@font-face {
+
+/* @font-face {
     font-family: Alike;
     src: url('../dist/fonts/Alike/Alike-Regular.ttf');
-}
+} */
 
 @font-face {
     font-family: OleoScript;
@@ -24,55 +25,42 @@
 }
 
 body {
-    /* padding: 50px 0px 0px 0px; */
     z-index: 0;
-    /* background-color: #004aad; */
     position: relative;
-    background-image: url("../assets/patternpad.svg");
+    /* background-image: url("../assets/patternpad3.svg"); */
+    background-image: linear-gradient(#a0d8ed00, #0B7A7580, #19535F80, #7B2D2680, #947EB080), url("../assets/patternpad3.svg");
 }
 
 h1 {
     font-family: Candal;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 h2 {
     font-family: Candal;
+    color: #222;
+    text-shadow: 0px 2px 3px #555;
 }
 
 p {
-    font-family: Alike;
+    font-family: Candal;
+    color: #24252c;
 }
 
-
-/* .titulo {
-    background-position: 0px -50px;
-    background: #0F2027;
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-} */
-
 .oyd {
-    color: wheat;
+    color: #402b58;
     text-align: center;
     font-family: OleoScript;
     font-weight: 900;
 }
 
-.obesidad {
-    color: wheat;
-}
-
-.disbiosis {
-    color: wheat;
-}
-
-.diabetes {
-    color: wheat;
-}
-
 #whatdoing {
     font-family: CabinSketch;
     color: #ffde59;
+    -webkit-text-stroke: 0px;
+    text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .neon {
@@ -90,10 +78,9 @@ p {
 }
 
 #waves>p {
-    background-color: #57a6e4;
+    background-color: rgba(144, 255, 255, 0.6);
     margin-bottom: 0px;
     padding: 5px;
-    color: white;
     text-align: center;
 }
 
@@ -135,7 +122,7 @@ p {
 }
 
 .top {
-    color: white;
+    color: #636788;
     text-align: left;
     position: absolute;
     top: 10%;
@@ -150,14 +137,15 @@ p {
     box-shadow: 10px 10px #233dff;
 }
 
-#angulo {
+
+/* #angulo {
     -webkit-transform: rotate(-15deg);
     -moz-transform: rotate(-15deg);
     -ms-transform: rotate(-15deg);
     -o-transform: rotate(-15deg);
     transform: rotate(-15);
     font-size: 30px;
-}
+} */
 
 #primero {
     color: #ffcece;
@@ -166,31 +154,37 @@ p {
 }
 
 #segundo {
-    color: #ffface;
+    color: #f7d17e;
     /* text-shadow: 0 0 7px #ffcc99, 0 0 10px #ffcc99, 0 0 21px #ffcc99, 0 0 22px #ffe600, 0 0 42px #ffe600, 0 0 72px #ffe600, 0 0 92px #ffe600; */
     text-shadow: 0 0 7px #ffcc99, 0 0 10px #ffcc99, 0 0 21px #ffcc99;
 }
 
 #tercero {
-    color: #ffffff;
+    color: #584fad;
     /* text-shadow: 0 0 7px #ffffff, 0 0 10px #ffffff, 0 0 21px #ffffff, 0 0 22px #dfdfdf, 0 0 42px #dfdfdf, 0 0 72px #dfdfdf, 0 0 92px #dfdfdf; */
-    text-shadow: 0 0 7px #ffffff, 0 0 10px #ffffff, 0 0 21px #ffffff;
+    text-shadow: 0 0 7px #7b70da, 0 0 10px #7b70da, 0 0 21px #7b70da;
 }
 
 .bkgd {
     /* background-image: url("../assets/patternpad.svg"); */
-    background-color: #233dff;
-    margin: 0px -12px 32px -12px;
+    background-color: #c5e6f280;
+    margin: 0px -12px 100px -12px;
 }
 
 
 /* xl and beyond */
 
 @media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 50px;
+    }
+    #whatdoing {
+        font-size: 55px;
+    }
     .top {
         top: 10%;
         left: 5%;
-        font-size: 60px;
+        font-size: 70px;
     }
     .arrow {
         width: 50px;
@@ -224,7 +218,7 @@ p {
 
 @media screen and (max-width: 1200px) {
     p {
-        font-size: 22px;
+        font-size: 20px;
     }
     .top {
         top: 10%;
@@ -236,21 +230,17 @@ p {
     }
     .disbiosis {
         text-align: center;
-        /* font-size: 22.7px; */
     }
     .tripas {
         width: 70%;
     }
     .obesidad {
         text-align: center;
-        /* font-size: 22.7px; */
     }
     .diabetes {
         text-align: center;
-        /* font-size: 22.7px; */
     }
     #glucosa {
-        font-size: 28px;
         text-align: center;
     }
     .bkgd {
@@ -276,8 +266,8 @@ p {
     .diabetes {
         text-align: center;
     }
-    #nubes.recuadro {
-        font-size: 30.5px;
+    #glucosa {
+        font-size: 22px;
     }
 }
 
@@ -326,10 +316,17 @@ p {
 /* xs */
 
 @media screen and (max-width: 576px) {
-    .top {
-        top: 15%;
-        left: 5%;
+    h1 {
         font-size: 25px;
+    }
+    #whatdoing {
+        text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        font-size: 30px;
+    }
+    .top {
+        top: -5%;
+        left: 5%;
+        font-size: 30px;
         text-align: center;
     }
     .bottom {
@@ -362,7 +359,7 @@ p {
         border-right: none;
     }
     #glucosa {
-        font-size: 18px;
+        font-size: 16px;
         text-align: center;
         margin-bottom: 0px;
     }
