@@ -205,7 +205,9 @@ function pointsFam(valor) {
     return point;
 }
 
-function inactive(row, prg) {
+function deactive() {
+    row = ["row1", "row2", "row3", "row4", "row5"];
+    prg = ["prg1", "prg2", "prg3", "prg4", "prg5"];
     for (let index = 0; index < row.length; index++) {
         document.getElementById(row[index]).classList.add("text-muted");
         document.getElementById(row[index]).classList.remove("table-active");
@@ -223,7 +225,7 @@ function inactive(row, prg) {
 }
 
 window.onload = function() {
-    inactive(["row1", "row2", "row3", "row4", "row5"], ["prg1", "prg2", "prg3", "prg4", "prg5"]);
+    deactive();
 };
 
 function active(row, prg, bg) {
@@ -237,24 +239,25 @@ function active(row, prg, bg) {
 
 function interpretación(suma) {
     if (suma < 7) {
-        inactive(["row1", "row2", "row3", "row4", "row5"], ["prg1", "prg2", "prg3", "prg4", "prg5"]);
-        active("row1", "prg1", "bg-primary")
+        deactive();
+        active("row1", "prg1", "bg-primary");
+        dotora(1);
     }
     if (7 <= suma && suma <= 11) {
-        inactive(["row1", "row2", "row3", "row4", "row5"], ["prg1", "prg2", "prg3", "prg4", "prg5"]);
-        active("row2", "prg2", "bg-success")
+        deactive();
+        active("row2", "prg2", "bg-success");
     }
     if (12 <= suma && suma <= 14) {
-        inactive(["row1", "row2", "row3", "row4", "row5"], ["prg1", "prg2", "prg3", "prg4", "prg5"]);
-        active("row3", "prg3", "bg-warning")
+        deactive();
+        active("row3", "prg3", "bg-warning");
     }
     if (15 <= suma && suma <= 20) {
-        inactive(["row1", "row2", "row3", "row4", "row5"], ["prg1", "prg2", "prg3", "prg4", "prg5"]);
-        active("row4", "prg4", "bg-orange")
+        deactive();
+        active("row4", "prg4", "bg-orange");
     }
     if (20 < suma) {
-        inactive(["row1", "row2", "row3", "row4", "row5"], ["prg1", "prg2", "prg3", "prg4", "prg5"]);
-        active("row5", "prg5", "bg-danger")
+        deactive();
+        active("row5", "prg5", "bg-danger");
     }
 }
 
