@@ -1,3 +1,35 @@
+var elem = document.getElementById("alturaRange");
+var elem2 = document.getElementById("ombligoRange");
+var elem3 = document.getElementById("pesoRange");
+var rangeValue = function() {
+    console.log(this.id)
+    var newValue = document.getElementById(this.id).value;
+    var target;
+    switch (this.id) {
+        case "alturaRange":
+            target = document.getElementById("alturaValue");
+            break;
+        case "ombligoRange":
+            target = document.getElementById("ombligoValue");
+            break;
+        case "pesoRange":
+            target = document.getElementById("pesoValue");
+            break;
+        default:
+            break;
+    }
+    target.innerHTML = newValue;
+
+    h = parseFloat(document.getElementById("alturaRange").value);
+    w = parseFloat(document.getElementById("pesoRange").value);
+    imc = w / (h * h);
+    imc = Math.round((imc + 0.01 + Number.EPSILON) * 100) / 100
+    document.getElementById("imcValue").innerHTML = imc;
+}
+elem.addEventListener("input", rangeValue);
+elem2.addEventListener("input", rangeValue);
+elem3.addEventListener("input", rangeValue);
+
 function pointsEdad(valor) {
     valor = parseInt(valor);
     if (valor < 45) {
@@ -16,52 +48,58 @@ function pointsEdad(valor) {
 }
 
 function pointsOmbligo(valor) {
-    var checked_gender = document.querySelector('input[name = "genderOpt"]:checked')
-    console.log(checked_gender.value, valor)
     var point;
     valor = parseInt(valor);
-    switch (checked_gender.value) {
-        case "Masculino":
-            if (valor < 94) {
-                point = 0;
-            }
-            if (94 <= valor && valor <= 102) {
-                point = 3;
-            }
-            if (102 < valor) {
-                point = 4;
-            }
-            break;
-        case "Femenino":
-            if (valor < 80) {
-                point = 0;
-            }
-            if (80 <= valor && valor <= 88) {
-                point = 3;
-            }
-            if (88 < valor) {
-                point = 4;
-            }
-            break;
-        default:
-            break;
+    var checked_gender = document.querySelector('input[name = "genderOpt"]:checked')
+    try {
+        switch (checked_gender.value) {
+            case "Masculino":
+                if (valor < 94) {
+                    point = 0;
+                }
+                if (94 <= valor && valor <= 102) {
+                    point = 3;
+                }
+                if (102 < valor) {
+                    point = 4;
+                }
+                break;
+            case "Femenino":
+                if (valor < 80) {
+                    point = 0;
+                }
+                if (80 <= valor && valor <= 88) {
+                    point = 3;
+                }
+                if (88 < valor) {
+                    point = 4;
+                }
+                break;
+            default:
+                break;
+        }
+        return point;
+
+
+    } catch (error) {
+        console.log("no gender selccionado");
+        return 0;
     }
-    return point;
+
+    // console.log(checked_gender.value, valor)
+
+
 }
 
-var h = 0,
-    w = 0,
-    imc = 0;
+// var h = 0,
+//     w = 0,
+//     imc = 0;
 
 function pointsIMC() {
     h = parseFloat(document.getElementById("alturaRange").value);
     w = parseFloat(document.getElementById("pesoRange").value);
     imc = w / (h * h);
     imc = Math.round((imc + 0.01 + Number.EPSILON) * 100) / 100
-    console.log(imc);
-    ///
-    target = document.getElementById("imcValue");
-    target.innerHTML = imc;
     target = document.getElementById("imcLabel");
     target.innerHTML = imc;
     target = document.getElementById("imcPoints");

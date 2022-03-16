@@ -287,7 +287,7 @@
                                     </tr>
                                 </table>
                             </td>
-                            <td><span id="sexoLabel">---</span></td>
+                            <td>Sexo <br> <span id="sexoLabel">---</span></td>
                             <td><span id="ombligoPoints">---</span></td>
                         </tr>
                         <tr class="align-middle">
@@ -419,33 +419,5 @@
         <!-- endbuild -->
 
 </body>
-
-<script>
-    var elem = document.getElementById("alturaRange");
-    var elem2 = document.getElementById("ombligoRange");
-    var elem3 = document.getElementById("pesoRange");
-    var rangeValue = function() {
-        console.log(this.id)
-        var newValue = document.getElementById(this.id).value;
-        var target;
-        switch (this.id) {
-            case "alturaRange":
-                target = document.getElementById("alturaValue");
-                break;
-            case "ombligoRange":
-                target = document.getElementById("ombligoValue");
-                break;
-            case "pesoRange":
-                target = document.getElementById("pesoValue");
-                break;
-            default:
-                break;
-        }
-        target.innerHTML = newValue;
-    }
-    elem.addEventListener("input", rangeValue);
-    elem2.addEventListener("input", rangeValue);
-    elem3.addEventListener("input", rangeValue);
-</script>
 
 </html>
