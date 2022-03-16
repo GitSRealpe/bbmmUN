@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: Blogger_Sans-Bold;
     src: url('../dist/fonts/blogger-sans/Blogger_Sans-Bold.otf');
 }
@@ -11,7 +11,7 @@
 @font-face {
     font-family: Dosis;
     src: url('../dist/fonts/Dosis/static/Dosis-Bold.ttf');
-}
+} */
 
 .tab {
     margin-left: 8px;
@@ -27,35 +27,10 @@
     background-color: #fd7e14;
 }
 
-.row-header {
-    margin: 0px auto;
-    padding: 5px 5px;
-    border-top: 1px ridge;
-}
 
-.row-content {
-    margin: 0px auto;
-    padding: 0px 0px;
-    border-top: 1px ridge;
-}
-
-.footer {
-    background-color: #bfb1a9;
-    margin: 0px auto;
-    padding: 20px 0px;
-}
-
-body {
-    padding: 50px 0px 0px 0px;
-    z-index: 0;
-    font-family: Blogger_Sans-Bold;
-    /* background-color: rgb(109, 102, 89); */
-    background-image: url("../assets/calcbkgd.svg");
-}
-
-.container {
+/* .container {
     background-color: rgb(185, 174, 151);
-}
+} */
 
 .tab-content {
     border-left: 1px solid #ddd;
@@ -65,7 +40,7 @@ body {
 }
 
 .indicador_valor {
-    font-family: Dosis;
+    font-family: Candal;
     font-size: 150%;
 }
 

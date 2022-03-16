@@ -3,12 +3,6 @@
     src: url('../dist/fonts/Candal/Candal-Regular.ttf');
 }
 
-
-/* @font-face {
-    font-family: Alike;
-    src: url('../dist/fonts/Alike/Alike-Regular.ttf');
-} */
-
 @font-face {
     font-family: OleoScript;
     src: url('../dist/fonts/Oleo_Script/OleoScript-Bold.ttf');
@@ -64,7 +58,7 @@ p {
 }
 
 .neon {
-    font-size: 40px;
+    font-size: 60px;
     font-family: Colo-pro;
 }
 
@@ -78,7 +72,7 @@ p {
 }
 
 #waves>p {
-    background-color: rgba(144, 255, 255, 0.6);
+    background-color: #6cffff99;
     margin-bottom: 0px;
     padding: 5px;
     text-align: center;
@@ -160,9 +154,9 @@ p {
 }
 
 #tercero {
-    color: #584fad;
+    color: #aba6d1;
     /* text-shadow: 0 0 7px #ffffff, 0 0 10px #ffffff, 0 0 21px #ffffff, 0 0 22px #dfdfdf, 0 0 42px #dfdfdf, 0 0 72px #dfdfdf, 0 0 92px #dfdfdf; */
-    text-shadow: 0 0 7px #7b70da, 0 0 10px #7b70da, 0 0 21px #7b70da;
+    text-shadow: 0 0 7px #5d55a5, 0 0 10px #5d55a5, 0 0 21px #5d55a5;
 }
 
 .bkgd {
