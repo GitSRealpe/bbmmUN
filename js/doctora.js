@@ -49,6 +49,14 @@ function dotora(recom) {
     }
 }
 
+function imcAdvise() {
+    h = parseFloat(document.getElementById("alturaRange").value);
+    w = parseFloat(document.getElementById("pesoRange").value);
+    imc = w / (h * h);
+    imc = Math.round((imc + 0.01 + Number.EPSILON) * 100) / 100
+    document.getElementById("imcValue").innerHTML = imc;
+}
+
 function closeModal(params) {
     var myModalEl = document.getElementById('modal');
     var modal = bootstrap.Modal.getInstance(myModalEl)

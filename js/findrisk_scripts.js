@@ -19,12 +19,7 @@ var rangeValue = function() {
             break;
     }
     target.innerHTML = newValue;
-
-    h = parseFloat(document.getElementById("alturaRange").value);
-    w = parseFloat(document.getElementById("pesoRange").value);
-    imc = w / (h * h);
-    imc = Math.round((imc + 0.01 + Number.EPSILON) * 100) / 100
-    document.getElementById("imcValue").innerHTML = imc;
+    imcAdvise();
 }
 elem.addEventListener("input", rangeValue);
 elem2.addEventListener("input", rangeValue);
