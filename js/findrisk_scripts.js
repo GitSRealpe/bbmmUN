@@ -246,18 +246,22 @@ function interpretación(suma) {
     if (7 <= suma && suma <= 11) {
         deactive();
         active("row2", "prg2", "bg-success");
+        dotora(2);
     }
     if (12 <= suma && suma <= 14) {
         deactive();
         active("row3", "prg3", "bg-warning");
+        dotora(3);
     }
     if (15 <= suma && suma <= 20) {
         deactive();
         active("row4", "prg4", "bg-orange");
+        dotora(4);
     }
     if (20 < suma) {
         deactive();
         active("row5", "prg5", "bg-danger");
+        dotora(5);
     }
 }
 

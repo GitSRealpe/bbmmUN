@@ -131,16 +131,6 @@ p {
     box-shadow: 10px 10px #233dff;
 }
 
-
-/* #angulo {
-    -webkit-transform: rotate(-15deg);
-    -moz-transform: rotate(-15deg);
-    -ms-transform: rotate(-15deg);
-    -o-transform: rotate(-15deg);
-    transform: rotate(-15);
-    font-size: 30px;
-} */
-
 #primero {
     color: #ffcece;
     /* text-shadow: 0 0 7px #ff9999, 0 0 10px #ff9999, 0 0 21px #ff9999, 0 0 22px #ff0000, 0 0 42px #ff0000, 0 0 72px #ff0000, 0 0 92px #ff0000; */
@@ -163,6 +153,13 @@ p {
     /* background-image: url("../assets/patternpad.svg"); */
     background-color: #c5e6f280;
     margin: 0px -12px 100px -12px;
+}
+
+div.fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
 }
 
 
@@ -303,6 +300,10 @@ p {
     .banner {
         height: 100px;
         object-fit: cover;
+    }
+    div.fixed {
+        bottom: 0px;
+        right: 0px;
     }
 }
 
