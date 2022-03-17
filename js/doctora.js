@@ -58,9 +58,9 @@ function imcAdvise() {
 }
 
 function closeModal(params) {
-    // var myModalEl = document.getElementById('modal');
-    // var modal = bootstrap.Modal.getInstance(myModalEl)
-    // modal.hide();
+    var myModalEl = document.getElementById('modal');
+    var modal = bootstrap.Modal.getInstance(myModalEl)
+    modal.hide();
     console.log("modal cerrado")
     return true;
 }
