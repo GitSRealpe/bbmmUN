@@ -28,8 +28,8 @@ resized();
 var controller = new ScrollMagic.Controller();
 const triggers = { trigger1: [".disbioso", ".disbiosis"], trigger2: [".obeso", ".obesidad"], trigger3: [".diabeto", ".diabetes"] };
 for (let trigger in triggers) {
-    console.log(trigger)
-    console.log(triggers[trigger])
+    // console.log(trigger)
+    // console.log(triggers[trigger])
     new ScrollMagic.Scene({
             triggerElement: "#" + trigger,
             triggerHook: 0.7, // show, when scrolled 10% into view
@@ -43,9 +43,9 @@ for (let trigger in triggers) {
 
 // build scenes
 var revealElements = document.getElementsByClassName("facts");
-console.log(revealElements)
+// console.log(revealElements)
 for (var i = 0; i < revealElements.length; i++) { // create a scene for each element
-    console.log(revealElements[i])
+    // console.log(revealElements[i])
     new ScrollMagic.Scene({
             triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
             offset: 50, // start a little later
