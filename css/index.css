@@ -160,6 +160,12 @@ div.fixed {
     bottom: 20px;
     right: 20px;
     width: 100px;
+    transition: transform .2s;
+    /* Animation */
+}
+
+div.fixed:hover {
+    transform: scale(1.5);
 }
 
 
