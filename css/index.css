@@ -39,7 +39,8 @@ h2 {
     text-shadow: 0px 2px 3px #555;
 }
 
-p {
+p,
+ul {
     font-family: Candal;
     color: #24252c;
 }
@@ -190,7 +191,8 @@ div.fixed:hover {
     .tripas {
         width: 70%;
     }
-    p {
+    p,
+    ul {
         font-size: 28px;
     }
     .disbiosis {
@@ -215,7 +217,8 @@ div.fixed:hover {
 /* lg */
 
 @media screen and (max-width: 1200px) {
-    p {
+    p,
+    ul {
         font-size: 20px;
     }
     .top {
@@ -284,7 +287,8 @@ div.fixed:hover {
     .tripas {
         width: 100%;
     }
-    p {
+    p,
+    ul {
         font-size: 18px;
     }
     .disbiosis {
@@ -343,7 +347,8 @@ div.fixed:hover {
     .tripas {
         width: 90%;
     }
-    p {
+    p,
+    ul {
         font-size: 16px;
     }
     .disbiosis {
