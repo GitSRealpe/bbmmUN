@@ -4,10 +4,7 @@
 .obesidad.visible,
 .diabeto.visible,
 .diabetes.visible,
-#one.facts.visible,
-#two.facts.visible,
-#three.facts.visible,
-#four.facts.visible {
+.facts.visible {
     opacity: 1;
     -webkit-transform: none;
     -moz-transform: none;
@@ -74,49 +71,7 @@
     transition: all 1s ease-out;
 }
 
-#one.facts {
-    opacity: 0;
-    -webkit-transform: translateX(-40px);
-    -moz-transform: translateX(-40px);
-    -ms-transform: translateX(-40px);
-    -o-transform: translateX(-40px);
-    transform: translateX(-40px);
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-}
-
-#two.facts {
-    opacity: 0;
-    -webkit-transform: translateX(-40px);
-    -moz-transform: translateX(-40px);
-    -ms-transform: translateX(-40px);
-    -o-transform: translateX(-40px);
-    transform: translateX(-40px);
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-}
-
-#three.facts {
-    opacity: 0;
-    -webkit-transform: translateX(-40px);
-    -moz-transform: translateX(-40px);
-    -ms-transform: translateX(-40px);
-    -o-transform: translateX(-40px);
-    transform: translateX(-40px);
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-}
-
-#four.facts {
+.facts {
     opacity: 0;
     -webkit-transform: translateX(-40px);
     -moz-transform: translateX(-40px);
