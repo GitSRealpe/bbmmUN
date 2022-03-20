@@ -55,19 +55,3 @@ for (var i = 0; i < revealElements.length; i++) { // create a scene for each ele
         .addIndicators({ name: "facts " + (i + 1) }) // add indicators (requires plugin)
         .addTo(controller);
 }
-
-// get all slides
-// var slides = document.querySelectorAll("section.panel");
-// // create scene for every slide
-// untriggers = ["70%", "100%", "100%", "1"];
-// for (var i = 0; i < slides.length; i++) {
-//     new ScrollMagic.Scene({
-//             triggerElement: slides[i],
-//             triggerHook: 'onLeave',
-//             duration: untriggers[i]
-//         })
-//         .setPin(slides[i], { pushFollowers: false })
-//         .addIndicators() // add indicators (requires plugin)
-//         .addTo(controller);
-// }
-// };
