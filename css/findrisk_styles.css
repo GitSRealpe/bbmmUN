@@ -28,7 +28,13 @@
 }
 
 .alert-orange {
-    background-color: #fd7e14;
+    background-color: #ffcfa8;
+    color: #8d4103;
+}
+
+.alert-purple {
+    background-color: #caadff;
+    color: #320e75;
 }
 
 
