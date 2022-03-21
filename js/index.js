@@ -41,13 +41,30 @@ for (let trigger in triggers) {
         .addTo(controller);
 }
 
+var tween;
+var dropElements = document.getElementsByClassName("drop");
+for (let i = 0; i < dropElements.length; i++) {
+    console.log("#dropTrigger" + i)
+    tween = gsap.fromTo(dropElements[i], { autoAlpha: 0, y: -70, delay: .5 }, { autoAlpha: 1, duration: .5, y: 0, ease: "back.out(2)" });
+    new ScrollMagic.Scene({
+            triggerElement: "#dropTrigger" + i,
+            triggerHook: 0.5,
+            offset: 70
+        })
+        .setTween(tween)
+        .addIndicators()
+        .addTo(controller);
+
+}
+// var tween = gsap.fromTo('#test', { autoAlpha: 0, y: -150 }, { autoAlpha: 1, duration: .5, y: 0, ease: "bounce.out", delay: 0 });
+
 // build scenes
 var revealElements = document.getElementsByClassName("facts");
 // console.log(revealElements)
 for (var i = 0; i < revealElements.length; i++) { // create a scene for each element
     // console.log(revealElements[i])
     new ScrollMagic.Scene({
-            triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+            triggerElement: revealElements[i],
             offset: 50, // start a little later
             triggerHook: 0.9,
         })
