@@ -4,7 +4,8 @@
 .obesidad.visible,
 .diabeto.visible,
 .diabetes.visible,
-.facts.visible {
+.facts.visible,
+.titulo.visible {
     opacity: 1;
     -webkit-transform: none;
     -moz-transform: none;
@@ -71,7 +72,8 @@
     transition: all 1s ease-out;
 }
 
-.facts {
+.facts,
+.titulo {
     opacity: 0;
     -webkit-transform: translateX(-40px);
     -moz-transform: translateX(-40px);
