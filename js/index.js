@@ -26,7 +26,7 @@ window.addEventListener('resize', resized);
 resized();
 // init controller
 var controller = new ScrollMagic.Controller();
-const triggers = { trigger1: [".disbioso", ".disbiosis"], trigger2: [".obeso", ".obesidad"], trigger3: [".diabeto", ".diabetes"] };
+const triggers = { trigger1: ["#disbioso.dibujo", ".disbiosis", "#inicio.titulo"], trigger2: ["#obeso.dibujo", ".obesidad", "#obesidadT.titulo"], trigger3: ["#diabeto.dibujo", ".diabetes", "#diabetesT.titulo"] };
 for (let trigger in triggers) {
     // console.log(trigger)
     // console.log(triggers[trigger])

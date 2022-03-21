@@ -1,8 +1,6 @@
-.disbioso.visible,
+.dibujo.visible,
 .disbiosis.visible,
-.obeso.visible,
 .obesidad.visible,
-.diabeto.visible,
 .diabetes.visible,
 .facts.visible,
 .titulo.visible {
@@ -14,9 +12,7 @@
     transform: none;
 }
 
-.disbioso,
-.obeso,
-.diabeto {
+.dibujo {
     opacity: 0;
     -webkit-transform: scale(0.9);
     -moz-transform: scale(0.9);
