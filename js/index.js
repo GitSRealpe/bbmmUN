@@ -26,7 +26,7 @@ window.addEventListener('resize', resized);
 resized();
 // init controller
 var controller = new ScrollMagic.Controller();
-const triggers = { trigger1: ["#disbioso.dibujo", ".disbiosis", "#inicio.titulo"], trigger2: ["#obeso.dibujo", ".obesidad", "#obesidadT.titulo"], trigger3: ["#diabeto.dibujo", ".diabetes", "#diabetesT.titulo"] };
+const triggers = { trigger1: ["#disbioso.dibujo", ".disbiosis", "#inicio.titulo"], trigger2: ["#obeso.dibujo", ".obesidad", "#obesidadT.titulo"], trigger3: ["#diabeto.dibujo", ".diabetes", "#diabetesT.titulo"], trigger4: ["#insulino.dibujo"], trigger5: ["#pancreas.dibujo"] };
 for (let trigger in triggers) {
     // console.log(trigger)
     // console.log(triggers[trigger])
@@ -34,7 +34,7 @@ for (let trigger in triggers) {
             triggerElement: "#" + trigger,
             triggerHook: 0.7, // show, when scrolled 10% into view
             // duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
-            offset: 70 // move trigger to center of element
+            offset: 0 // move trigger to center of element
         })
         .setClassToggle(triggers[trigger].toString(), "visible") // add class to reveal
         .addIndicators() // add indicators (requires plugin)
@@ -48,8 +48,8 @@ for (let i = 0; i < dropElements.length; i++) {
     tween = gsap.fromTo(dropElements[i], { autoAlpha: 0, y: -70, delay: .5 }, { autoAlpha: 1, duration: .5, y: 0, ease: "back.out(2)" });
     new ScrollMagic.Scene({
             triggerElement: "#dropTrigger" + i,
-            triggerHook: 0.5,
-            offset: 70
+            triggerHook: 0.7,
+            offset: 0
         })
         .setTween(tween)
         .addIndicators()
@@ -65,7 +65,7 @@ for (var i = 0; i < revealElements.length; i++) { // create a scene for each ele
     // console.log(revealElements[i])
     new ScrollMagic.Scene({
             triggerElement: revealElements[i],
-            offset: 50, // start a little later
+            offset: 20, // start a little later
             triggerHook: 0.9,
         })
         .setClassToggle(revealElements[i], "visible") // add class toggle
