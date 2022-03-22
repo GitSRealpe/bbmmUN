@@ -37,7 +37,7 @@ for (let trigger in triggers) {
             offset: 0 // move trigger to center of element
         })
         .setClassToggle(triggers[trigger].toString(), "visible") // add class to reveal
-        .addIndicators() // add indicators (requires plugin)
+        // .addIndicators() // add indicators (requires plugin)
         .addTo(controller);
 }
 
@@ -52,7 +52,7 @@ for (let i = 0; i < dropElements.length; i++) {
             offset: 0
         })
         .setTween(tween)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
 }
@@ -69,6 +69,6 @@ for (var i = 0; i < revealElements.length; i++) { // create a scene for each ele
             triggerHook: 0.9,
         })
         .setClassToggle(revealElements[i], "visible") // add class toggle
-        .addIndicators({ name: "facts " + (i + 1) }) // add indicators (requires plugin)
+        // .addIndicators({ name: "facts " + (i + 1) })
         .addTo(controller);
 }
