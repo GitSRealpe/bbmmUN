@@ -97,35 +97,119 @@ function imcAdvise() {
     document.getElementById("imcValue").innerHTML = imc;
 
     if (imc < 18.49) {
-        imcClass.innerHTML = "<div class='alert alert-primary d-flex align-items-center' role='alert'>" +
-            "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#info-fill'/></svg>" +
-            "Clasificación = Peso Bajo</div>";
+        imcClass.innerHTML = "<div class='alert alert-primary' role='alert'>" +
+            "<div class='text-center'>" +
+            "<h4><svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#info-fill'/></svg>" +
+            "Clasificación = Peso Bajo</h4></div>" +
+            "<hr>" +
+            "<div class='blockquote-footer mt-0'>" +
+            "Ref: American Diabetes Association Professional Practice Committee; <q>8. Obesity and Weight Management for the Prevention and Treatment of Type 2 Diabetes: <i>Standards of Medical Care in Diabetes—2022</i></q>," +
+            "<cite title='Diabetes Care'>Diabetes Care</cite>, " +
+            "January 2022; Vol:45 (Supplement_1): S113-S124. " +
+            "<br class='d-sm-none'>" +
+            "<a href='https://doi.org/10.2337/dc22-S008' target='_blank' rel='noopener noreferrer'>" +
+            "DOI: 10.2337/dc22-S008</a>" +
+            "</div>" +
+            "</div>";
     }
     if (18.50 <= imc && imc <= 24.99) {
-        imcClass.innerHTML = "<div class='alert alert-success d-flex align-items-center' role='alert'>" +
-            "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#info-fill'/></svg>" +
-            "Clasificación = Peso Normal</div>";
+        imcClass.innerHTML = "<div class='alert alert-success' role='alert'>" +
+            "<div class='text-center'>" +
+            "<h4><svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#info-fill'/></svg>" +
+            "Clasificación = Peso Normal</h4></div>" +
+            "<hr>" +
+            "<div class='blockquote-footer mt-0'>" +
+            "Ref: American Diabetes Association Professional Practice Committee; <q>8. Obesity and Weight Management for the Prevention and Treatment of Type 2 Diabetes: <i>Standards of Medical Care in Diabetes—2022</i></q>," +
+            "<cite title='Diabetes Care'>Diabetes Care</cite>, " +
+            "January 2022; Vol:45 (Supplement_1): S113-S124. " +
+            "<br class='d-sm-none'>" +
+            "<a href='https://doi.org/10.2337/dc22-S008' target='_blank' rel='noopener noreferrer'>" +
+            "DOI: 10.2337/dc22-S008</a>" +
+            "</div>" +
+            "</div>";
     }
-    if (25 <= imc && imc <= 29.99) {
-        imcClass.innerHTML = "<div class='alert alert-warning d-flex align-items-center' role='alert'>" +
-            "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#exclamation-triangle-fill'/></svg>" +
-            "Clasificación = Sobrepeso</div>";
+    if (24.99 <= imc && imc <= 27) {
+        imcClass.innerHTML = "<div class='alert alert-warning' role='alert'>" +
+            "<div class='text-center'>" +
+            "<h4><svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#exclamation-triangle-fill'/></svg>" +
+            "Clasificación = Sobrepeso</h4></div>" +
+            "Le recomendamos consultar a un profesional en nutrición, evitar ganar más peso y seguir las siguientes recomendaciones de cambio en el estilo de vida:" +
+            "<ul>" +
+            "<li>Iniciar actividad física de intensidad moderada como caminatas a paso rápido, natación, trote, bicicleta, etc., por lo menos por 150 minutos cada semana. Para perder por lo menos el 5% del peso actual y mantenerse allí.</li>" +
+            "<li>No consumir alimentos procesados y artificiales como <q>paquetes</q>, gaseosas, dulces y postres.</li>" +
+            "<li>Mantener el consumo de frutas y verduras mínimo en una comida del día, luego de ser lavadas con abundante agua.</li>" +
+            "<li>Evite los jugos, en su lugar consuma abundante agua e infusiones sin azúcar o panela.</li>" +
+            "<li>Disminuya los alimentos con abundantes grasas y/o aceites, como fritos, sumado a una disminución en el consumo de sal (utilizar la mitad de lo consumido habitualmente). Se recomienda no dejar el salero al alcance de la mesa. </li>" +
+            "</ul>" +
+            "<hr>" +
+            "<div class='blockquote-footer mt-0'>" +
+            "Ref: American Diabetes Association Professional Practice Committee; <q>8. Obesity and Weight Management for the Prevention and Treatment of Type 2 Diabetes: <i>Standards of Medical Care in Diabetes—2022</i></q>," +
+            "<cite title='Diabetes Care'>Diabetes Care</cite>, " +
+            "January 2022; Vol:45 (Supplement_1): S113-S124. " +
+            "<br class='d-sm-none'>" +
+            "<a href='https://doi.org/10.2337/dc22-S008' target='_blank' rel='noopener noreferrer'>" +
+            "DOI: 10.2337/dc22-S008</a>" +
+            "</div>" +
+            "</div>";
     }
-    if (30 <= imc && imc <= 34.99) {
-        imcClass.innerHTML = "<div class='alert alert-orange d-flex align-items-center' role='alert'>" +
-            "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#exclamation-triangle-fill'/></svg>" +
-            "Clasificación = Obesidad Leve</div>";
+    if (27 <= imc && imc <= 29.99) {
+        imcClass.innerHTML = "<div class='alert alert-orange' role='alert'>" +
+            "<div class='text-center'>" +
+            "<h4><svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#exclamation-triangle-fill'/></svg>" +
+            "Clasificación = Obesidad</h4></div>" +
+            "Le sugerimos consultar a su médico y asistir a consulta con el nutricionista para dirigir la pérdida de peso efectiva. Es importante evitar ganar más peso y seguir las siguientes recomendaciones de cambio en el estilo de vida:" +
+            "<ul>" +
+            "<li>Iniciar actividad física de intensidad moderada como caminatas a paso rápido, natación, trote, bicicleta, etc., por lo menos por 150 minutos cada semana. Para perder por lo menos el 5% del peso actual y mantenerse allí. <strong>Consulte a su médico antes de iniciar cualquier actividad física nueva, para cerciorarse de la seguridad de la misma</strong>.</li>" +
+            "<li>No consumir alimentos procesados y artificiales como <q>paquetes</q>, gaseosas, dulces y postres.</li>" +
+            "<li>Mantener el consumo de frutas y verduras mínimo en una comida del día, luego de ser lavadas con abundante agua.</li>" +
+            "<li>Evite los jugos en su lugar, consuma abundante agua e infusiones sin azúcar o panela.</li>" +
+            "<li>Disminuya los alimentos con abundantes grasas y/o aceites como fritos, sumado a una disminución en el consumo de sal puede ser a la mitad de la ingestas habitual (se recomienda no dejar el salero al alcance de la mesa).</li>" +
+            "</ul>" +
+            "<hr>" +
+            "<div class='blockquote-footer mt-0'>" +
+            "Ref: American Diabetes Association Professional Practice Committee; <q>8. Obesity and Weight Management for the Prevention and Treatment of Type 2 Diabetes: <i>Standards of Medical Care in Diabetes—2022</i></q>," +
+            "<cite title='Diabetes Care'>Diabetes Care</cite>, " +
+            "January 2022; Vol:45 (Supplement_1): S113-S124. " +
+            "<br class='d-sm-none'>" +
+            "<a href='https://doi.org/10.2337/dc22-S008' target='_blank' rel='noopener noreferrer'>" +
+            "DOI: 10.2337/dc22-S008</a>" +
+            "</div>" +
+            "</div>";
     }
-    if (35 <= imc && imc <= 39.99) {
-        imcClass.innerHTML = "<div class='alert alert-purple d-flex align-items-center' role='alert'>" +
-            "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#exclamation-triangle-fill'/></svg>" +
-            "Clasificación = Obesidad Media</div>";
+    if (30 <= imc) {
+        imcClass.innerHTML = "<div class='alert alert-danger' role='alert'>" +
+            "<div class='text-center'>" +
+            "<h4><svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#exclamation-triangle-fill'/></svg>" +
+            "Clasificación = Obesidad</h4></div>" +
+            "Le sugerimos consultar a su médico y tomar consulta con el nutricionista para dirigir la pérdida de peso efectiva. Es importante evitar ganar más peso y seguir las siguientes recomendaciones de cambio en el estilo de vida:" +
+            "<ul>" +
+            "<li>Iniciar actividad física de intensidad moderada como caminatas a paso rápido, natación, trote, bicicleta, etc., por lo menos por 150 minutos cada semana. Para perder por lo menos el 5% del peso actual y mantenerse allí. <strong>Consulte a su médico antes de iniciar cualquier actividad física nueva, para cerciorarse de la seguridad de la misma</strong>.</li>" +
+            "<li>No consumir alimentos procesados y artificiales como <q>paquetes</q>, gaseosas, dulces y postres.</li>" +
+            "<li>Mantener el consumo de frutas y verduras mínimo en una comida del día, luego de ser lavadas con abundante agua.</li>" +
+            "<li>Evite los jugos en su lugar, consuma abundante agua e infusiones sin azúcar o panela.</li>" +
+            "<li>Disminuya los alimentos con abundantes grasas y/o aceites como fritos, sumado a una disminución en el consumo de sal a la mitad de lo consumido habitualmente (se recomienda no dejar el salero al alcance de la mesa).</li>" +
+            "</ul>" +
+            "<hr>" +
+            "<div class='blockquote-footer mt-0'>" +
+            "Ref: American Diabetes Association Professional Practice Committee; <q>8. Obesity and Weight Management for the Prevention and Treatment of Type 2 Diabetes: <i>Standards of Medical Care in Diabetes—2022</i></q>," +
+            "<cite title='Diabetes Care'>Diabetes Care</cite>, " +
+            "January 2022; Vol:45 (Supplement_1): S113-S124. " +
+            "<br class='d-sm-none'>" +
+            "<a href='https://doi.org/10.2337/dc22-S008' target='_blank' rel='noopener noreferrer'>" +
+            "DOI: 10.2337/dc22-S008</a>" +
+            "</div>" +
+            "</div>";
     }
-    if (40 <= imc) {
-        imcClass.innerHTML = "<div class='alert alert-danger d-flex align-items-center' role='alert'>" +
-            "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#exclamation-triangle-fill'/></svg>" +
-            "Clasificación = Obesidad Mórbida</div>";
-    }
+    // if (35 <= imc && imc <= 39.99) {
+    //     imcClass.innerHTML = "<div class='alert alert-danger  align-items-center' role='alert'>" +
+    //         "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#exclamation-triangle-fill'/></svg>" +
+    //         "Clasificación = Obesidad Media</div>";
+    // }
+    // if (40 <= imc) {
+    //     imcClass.innerHTML = "<div class='alert alert-danger  align-items-center' role='alert'>" +
+    //         "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#exclamation-triangle-fill'/></svg>" +
+    //         "Clasificación = Obesidad Mórbida</div>";
+    // }
 
 }
 
