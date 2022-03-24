@@ -5,47 +5,81 @@ function dotora(recom) {
         case 1:
             msj.innerHTML = "<div class='alert alert-primary d-flex align-items-center' role='alert'>" +
                 "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#info-fill'/></svg>" +
-                "<p style='margin: 0;'>tas super bien</p></div>" +
-                "Tips y demas" +
+                "<h3 style='margin: 0;'>1% - Riesgo Bajo</h3></div>" +
+                "Tu riesgo de presentar diabetes mellitus tipo 2 en 10 años es <strong>bajo</strong>, aconsejamos que:" +
                 "<ul>" +
-                "<li>tip 1</li>" +
-                "</ul>";
+                "<li>Mantengas una actividad física regular.</li>" +
+                "<li>Continúes una alimentación basada en frutas, verduras y legumbres.</li>" +
+                "</ul>" +
+                "<div class='blockquote-footer pt-1'>" +
+                "Ref: American Diabetes Association; <q><i>Standards of Medical Care in Diabetes—2022</i> Abridged for Primary Care Providers</q>," +
+                "<cite title='Clin Diabetes'>Clin Diabetes</cite>, " +
+                "January 2022; Vol:40 (1): 10-38. " +
+                "<br class='d-sm-none'>" +
+                "<a href='https://doi.org/10.2337/cd22-as01' target='_blank' rel='noopener noreferrer'>" +
+                "DOI: 10.2337/cd22-as01</a>" +
+                "</div>";
             break;
         case 2:
             msj.innerHTML = "<div class='alert alert-success d-flex align-items-center' role='alert'>" +
                 "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#info-fill'/></svg>" +
-                "<p style='margin: 0;'>tas mas o menos bien</p></div>" +
-                "Tips y demas" +
+                "<h3 style='margin: 0;'>4% - Ligeramente elevado</h3></div>" +
+                "Tu riesgo de presentar diabetes mellitus tipo 2 en 10 años es <strong>ligeramente elevado</strong>, recomendamos:" +
                 "<ul>" +
-                "<li>tip 1</li>" +
-                "</ul>";
+                "<li>Monitorees tu peso para mantenerlo en rango de normalidad según el índice de masa corporal (IMC).</li>" +
+                "<li>Realices actividad física de intensidad moderada al menos 150 minutos por semana.</li>" +
+                "<li>Alimentarte de manera adecuada evitando los alimentos azucarados.</li>" +
+                "</ul>" +
+                "<div class='blockquote-footer pt-1'>" +
+                "Ref: American Diabetes Association; <q><i>Standards of Medical Care in Diabetes—2022</i> Abridged for Primary Care Providers</q>," +
+                "<cite title='Clin Diabetes'>Clin Diabetes</cite>, " +
+                "January 2022; Vol:40 (1): 10-38. " +
+                "<br class='d-sm-none'>" +
+                "<a href='https://doi.org/10.2337/cd22-as01' target='_blank' rel='noopener noreferrer'>" +
+                "DOI: 10.2337/cd22-as01</a>" +
+                "</div>";
             break;
         case 3:
             msj.innerHTML = "<div class='alert alert-warning d-flex align-items-center' role='alert'>" +
                 "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#exclamation-triangle-fill'/></svg>" +
-                "<p style='margin: 0;'>no tas bien</p></div>" +
-                "Tips y demas" +
-                "<ul>" +
-                "<li>tip 1</li>" +
-                "</ul>";
+                "<h3 style='margin: 0;'>17% Riesgo moderado</h3></div>" +
+                "Posees un <strong>riesgo moderado</strong> de presentar diabetes mellitus tipo 2 en 10 años. Es necesario consultar a tu médico de confianza para que se realicen estudios adicionales que permitan descartar enfermedades metabólicas." +
+                "<div class='blockquote-footer mt-0'>" +
+                "Ref: American Diabetes Association; <q><i>Standards of Medical Care in Diabetes—2022</i> Abridged for Primary Care Providers</q>," +
+                "<cite title='Clin Diabetes'>Clin Diabetes</cite>, " +
+                "January 2022; Vol:40 (1): 10-38. " +
+                "<br class='d-sm-none'>" +
+                "<a href='https://doi.org/10.2337/cd22-as01' target='_blank' rel='noopener noreferrer'>" +
+                "DOI: 10.2337/cd22-as01</a>" +
+                "</div>";
             break;
         case 4:
             msj.innerHTML = "<div class='alert alert-orange d-flex align-items-center' role='alert'>" +
                 "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#exclamation-triangle-fill'/></svg>" +
-                "<p style='margin: 0;'>ojo con eso manito</p></div>" +
-                "Tips y demas" +
-                "<ul>" +
-                "<li>tip 1</li>" +
-                "</ul>";
+                "<h3 style='margin: 0;'>33% Riesgo alto</h3></div>" +
+                "Tienes un <strong>riesgo alto</strong> de presentar diabetes mellitus tipo 2 en 10 años. Es necesario que consultes con tu médico de confianza para que se realicen estudios adicionales para hacer seguimiento o descartar enfermedades metabólicas." +
+                "<div class='blockquote-footer mt-0'>" +
+                "Ref: American Diabetes Association; <q><i>Standards of Medical Care in Diabetes—2022</i> Abridged for Primary Care Providers</q>," +
+                "<cite title='Clin Diabetes'>Clin Diabetes</cite>, " +
+                "January 2022; Vol:40 (1): 10-38. " +
+                "<br class='d-sm-none'>" +
+                "<a href='https://doi.org/10.2337/cd22-as01' target='_blank' rel='noopener noreferrer'>" +
+                "DOI: 10.2337/cd22-as01</a>" +
+                "</div>";
             break;
         case 5:
             msj.innerHTML = "<div class='alert alert-danger d-flex align-items-center' role='alert'>" +
                 "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Info:'><use xlink:href='#exclamation-triangle-fill'/></svg>" +
-                "<p style='margin: 0;'>amiko come mejor porfavor</p></div>" +
-                "Tips y demas" +
-                "<ul>" +
-                "<li>tip 1</li>" +
-                "</ul>";
+                "<h3 style='margin: 0;'>50% Riesgo muy alto</h3></div>" +
+                "Tu riesgo de presentar diabetes mellitus tipo 2 es <strong>muy alto</strong>. Es necesario que consultes a tu médico de confianza para que te realicen estudios adicionales y hacer seguimiento o descartar enfermedades metabólicas." +
+                "<div class='blockquote-footer mt-0'>" +
+                "Ref: American Diabetes Association; <q><i>Standards of Medical Care in Diabetes—2022</i> Abridged for Primary Care Providers</q>," +
+                "<cite title='Clin Diabetes'>Clin Diabetes</cite>, " +
+                "January 2022; Vol:40 (1): 10-38. " +
+                "<br class='d-sm-none'>" +
+                "<a href='https://doi.org/10.2337/cd22-as01' target='_blank' rel='noopener noreferrer'>" +
+                "DOI: 10.2337/cd22-as01</a>" +
+                "</div>";
             break;
 
         default:
