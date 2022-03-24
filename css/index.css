@@ -162,6 +162,7 @@ div.fixed {
     right: 20px;
     width: 100px;
     transition: transform .2s;
+    z-index: 1080;
     /* Animation */
 }
 
