@@ -22,8 +22,8 @@ function resized() {
 
 }
 // window.onload = function() {
-window.addEventListener('resize', resized);
-resized();
+// window.addEventListener('resize', resized);
+// resized();
 // init controller
 var controller = new ScrollMagic.Controller();
 const triggers = { trigger1: ["#disbioso.dibujo", ".disbiosis", "#inicio.titulo"], trigger2: ["#obeso.dibujo", ".obesidad", "#obesidadT.titulo"], trigger3: ["#diabeto.dibujo", ".diabetes", "#diabetesT.titulo"], trigger4: ["#insulino.dibujo"], trigger5: ["#pancreas.dibujo"] };
