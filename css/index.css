@@ -44,6 +44,14 @@ p {
     color: #24252c;
 }
 
+#newscard {
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: normal;
+    font-style: italic;
+}
+
 .oyd {
     color: #402b58;
     text-align: center;
@@ -177,35 +185,45 @@ div.fixed:hover {
     h1 {
         font-size: 50px;
     }
+
     #whatdoing {
         font-size: 55px;
     }
+
     .top {
         top: 10%;
         left: 5%;
         font-size: 70px;
     }
+
     .arrow {
         width: 50px;
     }
+
     .tripas {
         width: 70%;
     }
+
     p {
         font-size: 28px;
     }
+
     .disbiosis {
         text-align: center;
     }
+
     .obeso {
         width: 35%;
     }
+
     .obesidad {
         text-align: center;
     }
+
     .diabetes {
         text-align: center;
     }
+
     #glucosa {
         font-size: 35px;
         text-align: center;
@@ -219,29 +237,37 @@ div.fixed:hover {
     p {
         font-size: 20px;
     }
+
     .top {
         top: 10%;
         left: 5%;
         font-size: 60px;
     }
+
     .arrow {
         width: 50px;
     }
+
     .disbiosis {
         text-align: center;
     }
+
     .tripas {
         width: 70%;
     }
+
     .obesidad {
         text-align: center;
     }
+
     .diabetes {
         text-align: center;
     }
+
     #glucosa {
         text-align: center;
     }
+
     .bkgd {
         margin-bottom: 60px;
     }
@@ -256,15 +282,19 @@ div.fixed:hover {
         left: 5%;
         font-size: 50px;
     }
+
     .arrow {
         width: 50px;
     }
+
     .tripas {
         width: 90%;
     }
+
     .diabetes {
         text-align: center;
     }
+
     #glucosa {
         font-size: 22px;
     }
@@ -279,36 +309,46 @@ div.fixed:hover {
         left: 5%;
         font-size: 40px;
     }
+
     .arrow {
         width: 40px;
     }
+
     .tripas {
         width: 100%;
     }
+
     p {
         font-size: 18px;
     }
+
     .disbiosis {
         text-align: left;
     }
+
     .obesidad {
         text-align: right;
     }
+
     .diabetes {
         text-align: center;
     }
+
     #waves.recuadro,
     #nubes.recuadro {
         border-left: none;
         border-right: none;
     }
+
     #glucosa {
         font-size: 22px;
     }
+
     .banner {
         height: 100px;
         object-fit: cover;
     }
+
     div.fixed {
         bottom: 0px;
         right: 0px;
@@ -322,53 +362,66 @@ div.fixed:hover {
     h1 {
         font-size: 25px;
     }
+
     #whatdoing {
         text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         font-size: 30px;
     }
+
     .top {
         top: -5%;
         left: 5%;
         font-size: 30px;
         text-align: center;
     }
+
     .bottom {
         bottom: 10%;
         right: 5%;
         background-color: black;
         box-shadow: 5px 5px #233dff;
     }
+
     .arrow {
         width: 35px;
     }
+
     .tripas {
         width: 90%;
     }
+
     p {
         font-size: 16px;
     }
+
     .disbiosis {
         text-align: left;
     }
+
     .obesidad {
         text-align: right;
     }
+
     .diabetes {
         text-align: left;
     }
+
     #waves.recuadro,
     #nubes.recuadro {
         border-left: none;
         border-right: none;
     }
+
     #glucosa {
         font-size: 16px;
         text-align: center;
         margin-bottom: 0px;
     }
+
     #findrisk {
         font-size: 30px;
     }
+
     .neon {
         font-size: 35px;
     }
